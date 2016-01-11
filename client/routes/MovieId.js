@@ -30,8 +30,8 @@ var Movie = React.createClass({
           util.error('Sorry, your browser is unsupported. Please try again using Chrome.')
         }
 
-        var client = new WebTorrent({rtcConfig: {"iceServers":[{"url":"stun:23.21.150.121","urls":"stun:23.21.150.121"},{"url":"turn:global.turn.twilio.com:3478?transport=udp","username":"0cb69480d0bd84c43f34da4e34bfff438fb8be84bec427c4bcfd2f7ba377bc41","credential":"mME7ogmF5Jrzr1A7qhhoL04lURLyn7CXDd1HD39vT5U=","urls":"turn:global.turn.twilio.com:3478?transport=udp"}]}})
-        var magnetURI = "magnet:?xt=urn:btih:81BC3C5E2F9CE3F748B521F456C3504BF785D663&dn=the+throwaways+2015+dvdrip+xvid+etrg&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce";   
+        var client = new WebTorrent()
+        var magnetURI = "magnet:?xt=urn:btih:A2EEF86438B9FEAF95A6CB95D1895695832FDB7C&dn=sisters+2015+720p+hdrip+x264+ac3+zi+t&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce";   
 
         client.add(magnetURI, onTorrent)
 
