@@ -5,6 +5,7 @@ var browserify = require('browserify-middleware');
 var less = require('less-middleware');
 var nunjucks = require('nunjucks');
 var config = require('./client/config');
+var parseTorrent = require('parse-torrent')
 
 // initialise express
 var app = express();
@@ -40,10 +41,13 @@ router.get('/', function(req, res) {
     // res.json();
 });
 
-router.get('/torrent/:url', function(req, res) {
-    request(req.params.url, function (error, response, body) {
-        res.render(body);
-    });
+router.get('/torrent/:torrUrl*', function(req, res) {
+	parseTorrent.remote(decodeURI(req.params.torrUrl), function (err, parsedTorrent) {
+	  	var uri = parseTorrent.toMagnetURI({
+		  infoHash: parsedTorrent.infoHash
+		}) 
+	  	res.json({uri})
+	})
 });
 
 router.get('/movies', function(req, res) {
@@ -75,9 +79,6 @@ app.use('/api', router);
 app.get('*', function(req, res) {
 	// this route will respond to all requests with the contents of your index
 	// template. Doing this allows react-router to render the view in the app.
-
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.render('index.html');
 });
 

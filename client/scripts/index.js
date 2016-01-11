@@ -3,8 +3,9 @@ var React = require('react'),
 
 var Header = React.createClass({
 	render: function() {
-		return (<header className="container-fluid">
-					<span className="mdl-layout-title">Title</span>
+		return (<header className="container-fluid full-width">
+					<span className="mdl-layout-title">Browsertime</span>
+					<PageNav />
 				</header>);
 	}
 });
@@ -13,7 +14,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer className="mdl-mini-footer">
 		<div className="mdl-mini-footer__left-section">
-			<div className="courier-new-font">Support this project: c37ad88617e167c966a365f79af305bd</div>
+			<div className="courier-new-font">Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG</div>
 		</div>
 	</footer>);
 	}
@@ -35,7 +36,6 @@ var App = React.createClass({
 		return (
 			<div className="">
 				<Header />
-				<PageNav />
 				<Router.RouteHandler/>
 				<Footer/>
 			</div>

@@ -6,21 +6,43 @@
 // Import Bootstrap
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 
-// Give the navigation some padding
-.nav {
+header {
+  background-color: #3498db;
+  
+  span.mdl-layout-title {
+    text-align: center;
+    line-height: 2;
+    color: white;
+  }
+
+  &.full-width {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav {
     width: 100%;
     display: block;
-	margin: 10px 0;
-	// Style the active links
+    // Style the active links
     a {
-        width: 50%;
-        display: inline-block;
-        text-align: center;
-        &.active {
-            width: 50%;
-		    font-weight: bold;
-	   }
+      color: white;
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+      background-color: #3498db;
+      line-height: 50px;
+      height: 50px;
+      text-decoration: none;
+      &.active {
+        background-color: #2980b9;
+        font-weight: bold;
+      }
     }
+  }
+}
+
+img {
+  width: 100%;
 }
 
 .courier-new-font {
