@@ -6,6 +6,7 @@ var less = require('less-middleware');
 var nunjucks = require('nunjucks');
 var config = require('./client/config');
 var parseTorrent = require('parse-torrent')
+var magnet = require('magnet-uri')
 
 // initialise express
 var app = express();
@@ -43,10 +44,8 @@ router.get('/', function(req, res) {
 
 router.get('/torrent/:torrUrl*', function(req, res) {
 	parseTorrent.remote(decodeURI(req.params.torrUrl), function (err, parsedTorrent) {
-	  	var uri = parseTorrent.toMagnetURI({
-		  infoHash: parsedTorrent.infoHash
-		}) 
-	  	res.json({uri})
+        var uri = magnet.encode(parsedTorrent);
+	  	res.json(uri)
 	})
 });
 

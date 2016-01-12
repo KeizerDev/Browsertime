@@ -18,7 +18,8 @@
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "request": "~2.67.0",
-    "simple-peer": "^5.11.8"
+    "simple-peer": "^5.11.8",
+    "magnet-uri": "~5.1.2"
   },
   "scripts": {
     "start": "node server.js",

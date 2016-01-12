@@ -29,7 +29,7 @@ var Movie = React.createClass({
                           background: 'url(' + object.medium_cover_image + ') center / cover'
                         };
                         var moviesUrl = "/movies/" + object.id;
-                        return (<a className="col-md-3 col-sm-4 col-xs-12" href={moviesUrl}>
+                        return (<a className="col-lg-2 col-md-3 col-sm-4 col-xs-12" href={moviesUrl}>
                             <div className="movie-card-image mdl-card mdl-shadow--2dp" style={divStyle} >
                                 <div className="mdl-card__title mdl-card--expand"></div>
                                 <div className="mdl-card__actions">
