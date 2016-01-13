@@ -1,4 +1,6 @@
 #Browsertime
+
+[![Join the chat at https://gitter.im/KeizerDev/Browsertime](https://badges.gitter.im/KeizerDev/Browsertime.svg)](https://gitter.im/KeizerDev/Browsertime?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 It uses http://webtorrent.io/ to stream the torrents client side and `yify/yts` to get the movies.
 
 
