@@ -3,8 +3,12 @@ var React = require('react'),
 
 var Header = React.createClass({
 	render: function() {
-		return (<header className="container-fluid full-width">
-					<span className="mdl-layout-title">Browsertime</span>
+		return (<header>
+					<div className="head">
+						<div className="container">
+							Browsertime
+						</div>
+					</div>
 					<PageNav />
 				</header>);
 	}
@@ -24,8 +28,13 @@ var PageNav = React.createClass({
 	render: function() {
 		return (
 			<div className="nav">
-				<Router.Link to="movies">Movies</Router.Link>
-				<Router.Link to="series">TV Series</Router.Link>
+				<div className="container">
+					<ul>
+						<li><Router.Link to="movies">Movies</Router.Link></li>
+						<li><Router.Link to="series">TV Series</Router.Link></li>
+						<li><i className="material-icons">search</i></li>
+					</ul>
+				</div>
 			</div>
 		);
 	}
