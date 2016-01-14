@@ -99,11 +99,11 @@ var Movie = React.createClass({
         }
 
 		return (
-            <div className="container-fluid"  style={backgroundImage}>
+            <div className="movie-detail" style={backgroundImage}>
                 <div className="row">
                     <div className="container">
-                        <div className="col-sm-5 col-md-4 col-lg-5"><img src={this.state.movie.large_cover_image}/></div>
-                        <div className="col-sm-9 col-md-8 col-lg-7">
+                        <div className="col-sm-4 col-md-4 col-lg-5"><img src={this.state.movie.large_cover_image}/></div>
+                        <div className="col-sm-8 col-md-8 col-lg-7">
                             <h2>{this.state.movie.title}</h2>
                             <ul className="mdl-mini-footer__link-list">
                                 <li>{this.state.movie.year}</li>
