@@ -100,18 +100,23 @@ var Movie = React.createClass({
 
 		return (
             <div className="movie-detail" style={backgroundImage}>
-                <div className="row">
-                    <div className="container">
-                        <div className="col-sm-4 col-md-4 col-lg-5"><img src={this.state.movie.large_cover_image}/></div>
-                        <div className="col-sm-8 col-md-8 col-lg-7">
-                            <h2>{this.state.movie.title}</h2>
-                            <ul className="mdl-mini-footer__link-list">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12 col-lg-12"><h2>{this.state.movie.title}</h2></div>
+                        <div className="col-xs-4 col-lg-4"><img className="img-responsive" src={this.state.movie.large_cover_image}/></div>
+                        <div className="col-xs-8 col-lg-8">
+           <ul className="mdl-mini-footer__link-list">
                                 <li>{this.state.movie.year}</li>
                                 <li>{this.state.movie.language}</li>
-                                <li>{this.state.movie.rating}</li>
+                                <li><span className="label label-warning">{this.state.movie.rating}</span></li>
                             </ul>
-                            <p>{this.state.movie.summary}</p>
+                            {this.state.movie.summary}
+                        </div>
                             <div id="player"></div>
+                            <div className="turnback">
+                                <button className="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                                    <i className="material-icons up">arrow_back</i>
+                                </button>
                         </div>
                     </div>
                 </div>
