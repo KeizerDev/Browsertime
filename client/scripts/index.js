@@ -18,7 +18,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer className="mdl-mini-footer">
 		<div className="mdl-mini-footer__left-section">
-		Made with a bunch of ♥ || Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG
+			Made with a bunch of ♥ || Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG
 		</div>
 	</footer>);
 	}
@@ -32,6 +32,7 @@ var PageNav = React.createClass({
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
+						<li><i className="material-icons">search</i></li>
 					</ul>
 				</div>
 			</div>
@@ -44,9 +45,9 @@ var App = React.createClass({
 		return (
 			<div className="">
 				<Header />
-				<div className="body-container">
-					<Router.RouteHandler/>
-				</div>
+					<div className="body-container">
+						<Router.RouteHandler/>
+					</div>
 				<Footer/>
 			</div>
 		);
@@ -57,14 +58,17 @@ var routes = {
 	Home: require('../routes/Home'),
 	Movie: require('../routes/Movie'),
 	MovieId: require('../routes/MovieId'),
+	MovieQuery: require('../routes/MovieQuery'),
 	Series: require('../routes/Serie')
 };
 
 var routes = (
 	<Router.Route name="app" path="/" handler={App}>
+		<Router.Route name="home" path="/" handler={routes.Home}/>
 		<Router.Route name="movies" path="/movies" handler={routes.Movie}/>
 		<Router.Route name="movieid" path="/movies/:id" handler={routes.MovieId}/>
 		<Router.Route name="series" path="/series" handler={routes.Series}/>
+		<Router.Route name="moviequery" path="/search/:query" handler={routes.MovieQuery}/>
 		<Router.DefaultRoute handler={routes.Movie}/>
 	</Router.Route>
 );

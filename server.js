@@ -55,14 +55,13 @@ router.get('/movies', function(req, res) {
 	});
 });
 
-router.get('/movies/:query', function(req, res) {
+router.get('/search/:query', function(req, res) {
 
 	/*
 {"status":"error","status_message":"Query not successful",]},"@meta":{"server_time":1432814403,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"0.71164512634277 sec"}}
 	fix error when search fails
 	*/
  	request('https://yts.ag/api/v2/list_movies.json?query_term=' + req.params.query, function (error, response, body) {
-    	console.log(body)
     	res.json(JSON.parse(body));
 	});
 });
