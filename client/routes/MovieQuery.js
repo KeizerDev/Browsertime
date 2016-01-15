@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Movie = React.createClass({
+var MovieQuery = React.createClass({
 
     getInitialState: function() {
         return {
@@ -29,10 +29,10 @@ var Movie = React.createClass({
                           background: 'url(' + object.medium_cover_image + ') center'
                         };
                         var moviesUrl = "/movies/" + object.id;
-                        return (<a className="col-lg-2 col-md-2 col-sm-3 col-xs-4 movie-card" href={moviesUrl}>
 
-                                <img className="img-responsive" src={object.medium_cover_image} />
-                                <div className="rating"><span className="label label-warning">{object.rating}</span></div>
+                        return (<a className="col-lg-2 col-md-2 col-sm-3 col-xs-4 movie-card" href={moviesUrl}>
+                            <img className="img-responsive" src={object.medium_cover_image} />
+                            <div className="rating"><span className="label label-warning">{object.rating}</span></div>
                         </a>)
                     })}
                 </div>
@@ -41,4 +41,4 @@ var Movie = React.createClass({
 	}
 });
 
-module.exports = Movie;
+module.exports = MovieQuery;
