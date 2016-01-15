@@ -61,11 +61,10 @@ var routes = {
 
 var routes = (
 	<Router.Route name="app" path="/" handler={App}>
-		<Router.Route name="home" path="/" handler={routes.Home}/>
 		<Router.Route name="movies" path="/movies" handler={routes.Movie}/>
 		<Router.Route name="movieid" path="/movies/:id" handler={routes.MovieId}/>
 		<Router.Route name="series" path="/series" handler={routes.Series}/>
-		<Router.DefaultRoute handler={routes.Home}/>
+		<Router.DefaultRoute handler={routes.Movie}/>
 	</Router.Route>
 );
 
