@@ -18,7 +18,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer className="mdl-mini-footer">
 		<div className="mdl-mini-footer__left-section">
-		Made with a bunch of ♥
+		Made with a bunch of ♥ || Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG
 		</div>
 	</footer>);
 	}
