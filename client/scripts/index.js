@@ -18,7 +18,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer className="mdl-mini-footer">
 		<div className="mdl-mini-footer__left-section">
-			<div className="courier-new-font">Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG</div>
+			Made with a bunch of ♥ || Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG
 		</div>
 	</footer>);
 	}
@@ -45,7 +45,9 @@ var App = React.createClass({
 		return (
 			<div className="">
 				<Header />
-				<Router.RouteHandler/>
+					<div className="body-container">
+						<Router.RouteHandler/>
+					</div>
 				<Footer/>
 			</div>
 		);
@@ -67,7 +69,7 @@ var routes = (
 		<Router.Route name="movieid" path="/movies/:id" handler={routes.MovieId}/>
 		<Router.Route name="series" path="/series" handler={routes.Series}/>
 		<Router.Route name="moviequery" path="/search/:query" handler={routes.MovieQuery}/>
-		<Router.DefaultRoute handler={routes.Home}/>
+		<Router.DefaultRoute handler={routes.Movie}/>
 	</Router.Route>
 );
 
