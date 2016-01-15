@@ -18,7 +18,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer className="mdl-mini-footer">
 		<div className="mdl-mini-footer__left-section">
-			<div className="courier-new-font">Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG</div>
+		Made with a bunch of ♥
 		</div>
 	</footer>);
 	}
@@ -32,7 +32,6 @@ var PageNav = React.createClass({
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
-						<li><i className="material-icons">search</i></li>
 					</ul>
 				</div>
 			</div>
@@ -45,7 +44,9 @@ var App = React.createClass({
 		return (
 			<div className="">
 				<Header />
-				<Router.RouteHandler/>
+				<div className="body-container">
+					<Router.RouteHandler/>
+				</div>
 				<Footer/>
 			</div>
 		);
