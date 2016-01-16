@@ -1,8 +1,6 @@
 var React = require('react'),
 	Router = require('react-router');
-
-var query = "";
-
+	
 var Header = React.createClass({
 	render: function() {
 		return (<header>
