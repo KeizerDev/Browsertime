@@ -1,6 +1,6 @@
 var React = require('react'),
 	Router = require('react-router');
-
+	
 var Header = React.createClass({
 	render: function() {
 		return (<header>
@@ -25,6 +25,23 @@ var Footer = React.createClass({
 });
 
 var PageNav = React.createClass({
+	getInitialState: function() {
+        return {text: 'Search'};
+    },
+    inputSubmit: function() {
+        this.setState({text: ''});
+
+        if(this.refs.userInput.getDOMNode().value != 'Search')
+        window.location = "../search/"+this.refs.userInput.getDOMNode().value;
+    },
+    handleChange: function(e) {
+        this.setState({text: e.target.value});
+    },
+    handleKeyDown: function(e) {
+        if (e.keyCode === 13 ) {
+            return this.inputSubmit();
+        }
+    },
 	render: function() {
 		return (
 			<div className="nav">
@@ -32,7 +49,7 @@ var PageNav = React.createClass({
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
-						<li><i className="material-icons">search</i></li>
+						<li><input className="search" value={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/></li>
 					</ul>
 				</div>
 			</div>
