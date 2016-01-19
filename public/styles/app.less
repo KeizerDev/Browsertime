@@ -1,208 +1,108 @@
-/*
-// App Stylesheet
-// --------------
-*/
-
 // Import Bootstrap
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 
-@header-height: 105px;
+@header-height: 65px;
 
 body {
-  background-color: #15171C;
+  background-color: #242424;
 }
 
 header {
+  width: 82.5%;
+  height: @header-height;
+  background-color: #1c1c1c;
+  z-index: 999;
+
+  .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: @header-height;
+    text-align: left;
+    float: left;
+    width: 15%;
+  }
+
+  ul {
+    float: left;
+    list-style-type: none;
+    width: 85%;
     height: @header-height;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999;
 
-    .head {
-      background-color: #4D5B6E;
-      height: 65px;
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 65px;
-      text-align: left;
-    }
+    li {
+      float: left;
+      height: @header-height;
 
-    .nav {
-      background-color: #313B49;
-      height: 40px;
-      color: white;
-
-      ul {
-        float:left;
-        list-style-type: none;
-        padding: 0;
-        margin: 0 auto;
+      a{
+        color: #fff;
+        height: @header-height;
+        line-height: @header-height;
+        font-size: 13px;
+        text-decoration: none;
         width: 100%;
+        text-align: center;
+        display: inline-block;
+        padding: 0px 20px;
 
-        li {
-          float: left;
-          width: 50%;
-          height: 40px;
-
-          a {
-            color: #fff;
-            height: 40px;
-            line-height: 40px;
-            font-size: 12px;
-            text-decoration: none;
-            width: 100%;
-            text-align: center;
-            display: inline-block;
-
-            &:hover {
-              text-decoration: none;
-            }
-            &.active {
-              border-bottom: 2px #EB3F56 solid;
-            }
-          }
+        &:hover {
+          text-decoration: none;
+          color: white;
         }
-        li:last-child {
 
+        &.active {
+          border-bottom: 2px #eb3f56 solid;
+          color: white;
+          text-decoration: none;
         }
       }
-
     }
+    
+    .search-box {
+      float: right;
+      height: @header-height;
 
-}
+      input[type=text] {
+        height: @header-height;
+        line-height: @header-height;
+        color: white;
+        font-weight: bold;
+        border: 0;
+        background: transparent;
+        border-bottom: 2px #EB3F56 solid;
 
-
-.swap-icon {
-  text-align: right;
-  i {
-    margin: 24px 0px;
-    font-size: 4vw;
-    cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
   }
 }
 
-.body-container {
-  padding-top: 105px;
-}
-
-.search {
-  background-color: #273140;
-  float: right;
-  height: 40px;
-  line-height: 40px;
-}
-
-.fullscreen {
-  float: right;
-}
-
-.p-top {
-  padding-top: 120px;
-}
-
-.p-no {
-  padding: 0;
-}
-
-img {
-  width: 100%;
-}
-
-.movie-detail {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  color: white;
-}
-
-h2 {
-  color: white;
-  font-size: 4vw;
-  font-weight: bold;
-  margin-bottom: 15px;
-  padding: 0;
-}
-
-.movie-detail .year {
-  font-size: 2vw;
-  color: white;
-}
-
-.courier-new-font {
-    font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter, monospace;
-}
-
-.row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.movie-card {
-    margin: 10px 0;
-    padding: 0;
-}
-.movie-card-image > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
-.movie-card-image__filename {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.col-md-8 {
-  color: white;
-}
-
-.rating {
-  z-index: 0;
+.sidebar {
+  background-color: #1d1d1d;
+  width: 17.5%;
+  height: 100vh;
+  right: 0;
+  top: 0;
   position: absolute;
-  right: 15px;
-  top: 5px;
-}
+  z-index: 999;
 
-.rating .badge {
-  background-color: #ffc107;
-}
-
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-
-.turnback {
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-}
-
-.up {
-  margin-top: -7px;
-}
-
-#player video {
-  width: 100%;
-}
-
-.mdl-button--fab.mdl-button--colored {
-  background-color: #eb3f56;
-}
-
-@media only screen and (max-width: 900px) {
-  .movie-detail .title {
-    font-size: 5.5vw;
+  .header {
+    background-color: #141414;
+    height: @header-height;
+    line-height: @header-height;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-align: center;
   }
-  .swap-icon i {
-    font-size: 7vw;
-    margin-bottom: 15px;
-    margin-top: 20px;
-  }
+}
+
+.container .movie-list {
+  width: 82.5%;
+  height: calc(100% - 65px);
 }
