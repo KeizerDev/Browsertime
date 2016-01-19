@@ -80,6 +80,20 @@ header {
   }
 }
 
+.body-container {
+  width: 82.5%;
+  position: absolute;
+  left: 0;
+  height: calc(100vh ~"-" @header-height);
+  top: @header-height;
+  z-index: 999;
+
+  .movie-list {
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
 .sidebar {
   background-color: #1d1d1d;
   width: 17.5%;
@@ -102,9 +116,6 @@ header {
   }
 }
 
-.body-container {
-  width: 82.5%;
-  height: ~"calc(100% - 65px)";
-  overflow: hidden;
-
+footer {
+  display: none !important;
 }
