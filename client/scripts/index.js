@@ -4,13 +4,23 @@ var React = require('react'),
 var Header = React.createClass({
 	render: function() {
 		return (<header>
-					<div className="head">
-						<div className="container">
+					<div className="container">
+						<div className="logo">	
 							Browsertime
 						</div>
-					</div>
 					<PageNav />
+					</div>
 				</header>);
+	}
+});
+
+var Sidebar = React.createClass({
+	render: function() {
+		return (
+			<div className="sidebar">
+				<div className="header"></div>
+			</div>
+			);
 	}
 });
 
@@ -49,7 +59,9 @@ var PageNav = React.createClass({
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
-						<li><input className="search" value={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/></li>
+						<div className="search-box">
+							<input value={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -61,6 +73,7 @@ var App = React.createClass({
 	render: function() {
 		return (<div className="">
 				<Header />
+				<Sidebar />
 					<div className="body-container">
 						<Router.RouteHandler/>
 					</div>
