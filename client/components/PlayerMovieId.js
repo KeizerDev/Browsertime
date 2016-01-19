@@ -18,8 +18,7 @@ var PlayerMovieId = React.createClass({
 
         var client = new WebTorrent()
 
-        var torrentId = 'magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d'
-
+        var torrentId = 'magnet:?xt=urn:btih:802f7ff837f2f3b0bb96ab8ab07285760a79fac3&dn=Goosebumps+%282015%29+%5BYTS.AG%5D&tr=wss%3A%2F%2Ftracker.webtorrent.io'
         client.add(torrentId, onTorrent)
 
         function onTorrent (torrent) {
