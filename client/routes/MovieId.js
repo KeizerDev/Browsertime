@@ -45,26 +45,29 @@ var MovieId = React.createClass({
         //     isSupported = (<div>No</div>)
         // }
 
-        return (<div className="movie-detail" style={backgroundImage}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xs-10 col-lg-11">
-                            <h2>{this.state.movie.title}</h2>
+        return (<div className="movie-visual">
+                    <div className="movie-information" style={backgroundImage}>
+                        <div className="shadow"></div>
+                        <div className="container">
+                            <div className="movie-play-button">
+                                <i className="material-icons">play_arrow</i>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-9">
+                                    <div className="movie-title">
+                                        {this.state.movie.title}
+                                    </div>
+                                </div>
+                                <div className="col-md-3">
+                                    <div className="movie-releasedate">
+                                        Release Date:{this.state.movie.release-date}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-xs-2 col-lg-1 swap-icon">
-                            <i className="material-icons" onClick={this.handleClick}>swap_horiz</i>
-                        </div>
-                    </div>
-                    <div className="movie-container">
-                        {toggleShow}
-                    </div>
-                    <div className="turnback">
-                        <button className="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
-                            <i className="material-icons up">arrow_back</i>
-                        </button>
                     </div>
                 </div>
-            </div>);
+            );
     }
 });
 

@@ -4,7 +4,7 @@ var React = require('react'),
 var Header = React.createClass({
 	render: function() {
 		return (<header>
-					<div className="container">
+					<div className="container-fluid">
 						<div className="logo">	
 							Browsertime
 						</div>
@@ -18,7 +18,7 @@ var Sidebar = React.createClass({
 	render: function() {
 		return (
 			<div className="sidebar">
-				<div className="header"></div>
+				<div className="header">Last Seen Movies</div>
 			</div>
 			);
 	}
@@ -55,15 +55,13 @@ var PageNav = React.createClass({
 	render: function() {
 		return (
 			<div className="nav">
-				<div className="container">
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
 						<div className="search-box">
-							<input value={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
+							<input placeholder={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
 						</div>
 					</ul>
-				</div>
 			</div>
 		);
 	}

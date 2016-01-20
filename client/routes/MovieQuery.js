@@ -22,7 +22,7 @@ var MovieQuery = React.createClass({
 	render: function() {
         console.log(this.state.movies)
 		return (
-            <div className="container">
+            <div className="container-fluid movie-list">
                 <div className="row">
                     {this.state.movies.map(function(object, i){
                         var divStyle = {

@@ -28,7 +28,7 @@ header {
   ul {
     float: left;
     list-style-type: none;
-    width: 85%;
+    width: 90%;
     height: @header-height;
 
     li {
@@ -71,6 +71,7 @@ header {
         border: 0;
         background: transparent;
         border-bottom: 2px #EB3F56 solid;
+        width: 220px;
 
         &:focus {
           outline: none;
@@ -91,8 +92,78 @@ header {
   .movie-list {
     overflow-y: scroll;
     height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
+
+.movie-visual {
+  background: #000;
+  height: 590px;
+  margin: 0 0 0 0;
+  position: relative;
+  width: 100%;
+
+  .movie-information {
+    background: url(https://www.pathe.nl/themes/main/gfx/placeholders/movievisual-placeholder.png) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 590px;
+    overflow: hidden;
+    width: 100%;
+
+    .shadow {
+      background: url(https://www.pathe.nl/themes/main/gfx/overlays/visual-shadow.png) repeat-x 0 100%;
+      bottom: 0;
+      height: 590px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+
+      h4 {
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.rating {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+
+.movie-card{
+  margin: 15px 0px;
+}
+
+.movie-play-button {
+  color: white;
+  font-size: 30px;
+  padding: 50px 0px;
+  border: 4px white solid;
+  border-radius: 100%;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+}
+
+.movie-title {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.movie-releasedate {
+  color: #a7a9ac;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
 
 .sidebar {
   background-color: #1d1d1d;
@@ -115,7 +186,68 @@ header {
     text-align: center;
   }
 }
+.container {
+  width: 100%;
+  text-align: center;
+  margin-top: 25vh;
+}
 
+.circle {
+  stroke: #f8aa28;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+/*  border: 1px solid red;*/
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  
+  .triangle {
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #000;
+    transform: translateY(0) 
+   }
+  
+  
+  &:hover {
+    
+    .triangle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      stroke: #f8aa28;
+      animation: nudge 0.7s ease-in-out;
+      
+      @keyframes nudge{
+        0% {
+          transform: translateX(0)  
+        }
+        30% {
+          transform: translateX(-5px)
+        }
+        50% {
+          transform: translateX(5px)
+        }
+        70% {
+          transform: translateX(-2px)
+        }
+        100% {
+          transform: translateX(0)
+        }
+      }
+    }
+    
+    .circle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    
+  }
+}
 footer {
   display: none !important;
 }
