@@ -60,7 +60,7 @@ var MovieId = React.createClass({
                                 </div>
                                 <div className="col-md-3">
                                     <div className="movie-releasedate">
-                                        Release Date:{this.state.movie.release-date}
+                                        Release Date:{this.state.movie.rating}
                                     </div>
                                 </div>
                             </div>
