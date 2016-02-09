@@ -22,7 +22,7 @@ var Movie = React.createClass({
 	render: function() {
         console.log(this.state.movies)
 		return (
-            <div className="container-fluid movie-list">
+            <div className="container top">
                 <div className="row">
                     {this.state.movies.map(function(object, i){
                         var divStyle = {

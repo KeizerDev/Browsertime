@@ -1,253 +1,102 @@
 // Import Bootstrap
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 
-@header-height: 65px;
+@header-height: 75px;
+@header-color: #ffffff;
+@text-red: #C1272D;
 
-body {
-  background-color: #242424;
-}
 
 header {
-  width: 82.5%;
+  background: @header-color;
   height: @header-height;
-  background-color: #1c1c1c;
-  z-index: 999;
-
-  .logo {
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: @header-height;
-    text-align: left;
-    float: left;
-    width: 10%;
-  }
-
-  ul {
-    float: left;
-    list-style-type: none;
-    width: 90%;
-    height: @header-height;
-
-    li {
-      float: left;
-      height: @header-height;
-
-      a{
-        color: #fff;
-        height: @header-height;
-        line-height: @header-height;
-        font-size: 13px;
-        text-decoration: none;
-        width: 100%;
-        text-align: center;
-        display: inline-block;
-        padding: 0px 20px;
-
-        &:hover {
-          text-decoration: none;
-          color: white;
-        }
-
-        &.active {
-          border-bottom: 2px #eb3f56 solid;
-          color: white;
-          text-decoration: none;
-        }
-      }
-    }
-    
-    .search-box {
-      float: right;
-      height: @header-height;
-
-      input {
-        height: @header-height;
-        line-height: @header-height;
-        color: white;
-        font-weight: bold;
-        border: 0;
-        background: transparent;
-        border-bottom: 2px #EB3F56 solid;
-        width: 220px;
-
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-  }
-}
-
-.body-container {
-  width: 82.5%;
-  position: absolute;
+  position: fixed;
   left: 0;
-  height: calc(100vh ~"-" @header-height);
-  top: @header-height;
-  z-index: 999;
-
-  .movie-list {
-    overflow-y: scroll;
-    height: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
-
-.movie-visual {
-  background: #000;
-  height: 590px;
-  margin: 0 0 0 0;
-  position: relative;
-  width: 100%;
-
-  .movie-information {
-    background: url(https://www.pathe.nl/themes/main/gfx/placeholders/movievisual-placeholder.png) no-repeat;
-    background-size: cover;
-    display: inline-block;
-    height: 590px;
-    overflow: hidden;
-    width: 100%;
-
-    .shadow {
-      background: url(https://www.pathe.nl/themes/main/gfx/overlays/visual-shadow.png) repeat-x 0 100%;
-      bottom: 0;
-      height: 590px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-
-      h4 {
-        color: white;
-        font-weight: bold;
-        font-size: 15px;
-      }
-    }
-  }
-}
-
-.rating {
-  position: absolute;
-  top: 5px;
-  right: 25px;
-}
-
-.movie-card{
-  margin: 15px 0px;
-}
-
-.movie-play-button {
-  color: white;
-  font-size: 30px;
-  padding: 50px 0px;
-  border: 4px white solid;
-  border-radius: 100%;
-  text-align: center;
-  width: 140px;
-  height: 140px;
-}
-
-.movie-title {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-.movie-releasedate {
-  color: #a7a9ac;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-
-.sidebar {
-  background-color: #1d1d1d;
-  width: 17.5%;
-  height: 100vh;
-  right: 0;
   top: 0;
-  position: absolute;
-  z-index: 999;
-
-  .header {
-    background-color: #141414;
-    height: @header-height;
-    line-height: @header-height;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    text-align: center;
-  }
-}
-.container {
   width: 100%;
-  text-align: center;
-  margin-top: 25vh;
-}
+  z-index: 999;
+  transition: all 0.2s ease-in-out;
 
-.circle {
-  stroke: #f8aa28;
-  stroke-dasharray: 650;
-  stroke-dashoffset: 650;
-  -webkit-transition: all 0.5s ease-in-out;
-  opacity: 0.3;
-}
+  .container {
 
-.playBut {
-/*  border: 1px solid red;*/
-  display: inline-block;
-  -webkit-transition: all 0.5s ease;
-  
-  .triangle {
-    -webkit-transition: all 0.7s ease-in-out;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 480;
-    stroke: #000;
-    transform: translateY(0) 
-   }
-  
-  
-  &:hover {
-    
-    .triangle {
-      stroke-dashoffset: 0;
-      opacity: 1;
-      stroke: #f8aa28;
-      animation: nudge 0.7s ease-in-out;
-      
-      @keyframes nudge{
-        0% {
-          transform: translateX(0)  
+    .logo {
+      float: left;
+      line-height: @header-height;
+
+      img {
+        height: 38px;
+      }
+    }
+
+    .logo-text {
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: @header-height;
+      margin-left: 10px;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      float: right;
+      list-style-type: none;
+
+      li {
+        float: left;
+        line-height: 75px;
+        padding: 0px 20px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+
+        .active {
+          color: @text-red;
         }
-        30% {
-          transform: translateX(-5px)
+
+        &:last-child {
+          padding-right: 0px;
         }
-        50% {
-          transform: translateX(5px)
-        }
-        70% {
-          transform: translateX(-2px)
-        }
-        100% {
-          transform: translateX(0)
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            color: @text-red;
+            text-decoration: none;
+          }
         }
       }
     }
-    
-    .circle {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-    
   }
 }
-footer {
-  display: none !important;
+.header-shadow {
+  -webkit-box-shadow: 0px 7px 30px 0px rgba(50, 50, 50, 0.74);
+  -moz-box-shadow:    0px 7px 30px 0px rgba(50, 50, 50, 0.74);
+  box-shadow:         0px 7px 30px 0px rgba(50, 50, 50, 0.74);
+  opacity: 0.99;
+}
+
+.container.top {
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.container.top h2 {
+  font-size: 18px;
+  font-family: 'Signika', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+ .col-md-2 {
+  padding: 2px;
+}
+
+.row {
+  padding-right: 13px;
+  padding-left: 13px;
 }
