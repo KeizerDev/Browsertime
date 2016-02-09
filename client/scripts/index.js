@@ -3,24 +3,15 @@ var React = require('react'),
 	
 var Header = React.createClass({
 	render: function() {
-		return (<header>
-					<div className="container-fluid">
-						<div className="logo">	
-							Browsertime
+		return (<header id="header">
+					<div className="container">
+						<div className="logo">
+							<img src="http://localhost:8080/assets/img/z.svg" />
 						</div>
+						<div className="logo-text">BrowserTime</div>
 					<PageNav />
 					</div>
 				</header>);
-	}
-});
-
-var Sidebar = React.createClass({
-	render: function() {
-		return (
-			<div className="sidebar">
-				<div className="header">Last Seen Movies</div>
-			</div>
-			);
 	}
 });
 
@@ -54,15 +45,11 @@ var PageNav = React.createClass({
     },
 	render: function() {
 		return (
-			<div className="nav">
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
 						<li><Router.Link to="series">TV Series</Router.Link></li>
-						<div className="search-box">
-							<input placeholder={this.state.text} ref="userInput" onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
-						</div>
+						<li><i className="glyphicon glyphicon-search"></i></li>
 					</ul>
-			</div>
 		);
 	}
 });
@@ -71,10 +58,7 @@ var App = React.createClass({
 	render: function() {
 		return (<div className="">
 				<Header />
-				<Sidebar />
-					<div className="body-container">
-						<Router.RouteHandler/>
-					</div>
+				<Router.RouteHandler/>
 				<Footer/>
 			</div>);
 	}

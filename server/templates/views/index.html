@@ -13,5 +13,16 @@
     <script src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(window).scroll(function() {     
+        var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                $("#header").addClass("header-shadow");
+            }
+            else {
+                $("#header").removeClass("header-shadow");
+            }
+        });
+    </script>
 </body>
 </html>
