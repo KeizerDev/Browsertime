@@ -16,3 +16,4 @@ node_modules
 
 # Generated css
 public/styles/*.css
+.DS_Store
