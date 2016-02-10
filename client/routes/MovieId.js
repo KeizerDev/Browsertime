@@ -45,33 +45,42 @@ var MovieId = React.createClass({
         //     isSupported = (<div>No</div>)
         // }
 
-        return (<div className="container-fluid top">
-                    <div className=""></div>
-                </div>
-            <div className="movie-visual">
-                    <div className="movie-information" style={backgroundImage}>
-                        <div className="shadow"></div>
-                        <div className="container">
-                            <div className="movie-play-button">
-                                <i className="material-icons">play_arrow</i>
+        return (<div><div className="movie-cover top" style={backgroundImage}>
+                    <div className="container">
+                        <div className="row">
+                        <div className="col-md-12 center">
+                            <img src={this.state.movie.medium_cover_image} />
+                        </div>
+                            <div className="col-md-6">
+                                <a>Play Movie</a>
                             </div>
-                            <div className="row">
-                                <div className="col-md-9">
-                                    <div className="movie-title">
-                                        {this.state.movie.title}
-                                    </div>
-                                </div>
-                                <div className="col-md-3">
-                                    <div className="movie-releasedate">
-                                        Release Date:{this.state.movie.rating}
-                                    </div>
-                                </div>
+                            <div className="col-md-6">
+                                <a>Trailer</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            );
+                <div className="container top">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h2>About {this.state.movie.title}</h2>
+                            <p className="p-left">{this.state.movie.description_intro}</p>
+                        </div>
+                        <div className="col-md-6">
+                            <h3>Movie Information</h3>
+                            <p className="p-left">
+                                Year: {this.state.movie.year}<br/>
+                                Rating: {this.state.movie.rating}<br/>
+                                Movie Length: {this.state.movie.runtime}
+                            </p>
+                        </div>
+                        <div className="col-md-6">
+                            <h3>Cast</h3>
+                            <p className="p-left"></p>
+                        </div>
+                    </div>
+                </div>
+                </div>);
     }
 });
 

@@ -35,7 +35,7 @@ var Movie = React.createClass({
                                 <div className="col-movie">
                                     <img className="width" src={object.medium_cover_image} />
                                     <div className="information">
-                                        <p className="title">The Hobbit: The Battle of the Five Armies</p>
+                                        <p className="title">{object.title}</p>
                                         <p className="rating">
                                             <Stars stars={object.rating} totalStars="5" />
                                         </p>

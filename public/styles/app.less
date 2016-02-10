@@ -82,6 +82,10 @@ header {
   position: relative;
 }
 
+.movie-cover a {
+  width: 300px;
+}
+
 .information {
     opacity: 0;
     text-align: center;
@@ -104,14 +108,53 @@ header {
       opacity: 1;
     }
 }
+.col-md-6 {margin-top: 15px;}
+p.p-left {padding-left:22px;}
+.col-md-6 a {
+    color: white;
+    border: 3px solid white;
+    padding: 11px 70px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px !important;
+    text-decoration: none;
+    -webkit-transition: background, 0.4s, ease-in-out;
+    -o-transition: background, 0.4s, ease-in-out;
+    transition: background, 0.4s, ease-in-out;
+    -webkit-transition: color, 0.4s, ease-in-out;
+    -o-transition: color, 0.4s, ease-in-out;
+    transition: color, 0.4s, ease-in-out;
+}
+
+.movie-cover {
+  width: 100%;
+}
+
+.movie-cover.top .container .row .col-md-12 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
 
 .fa {
     padding-left: 2px;
     padding-right: 2px;
 }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .active {
   color: #F3CB0B;
+}
+
+.center {
+  text-align: center;
 }
 
 .glyphicon {
@@ -121,6 +164,29 @@ header {
 .glyphicon:hover {
   color: #C1272D;
 }
+
+h2 {
+  border-left: 3px #C1272D solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: @body-grey;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h3 {
+  border-left: 3px #C1272D solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: @body-grey;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 
 .header-shadow {
   -webkit-box-shadow: 0px 7px 30px 0px rgba(50, 50, 50, 0.74);
