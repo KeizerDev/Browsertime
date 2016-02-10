@@ -33,7 +33,7 @@ var DetailMovie = React.createClass({
         }
 
         return (<div className={this.props.col}>
-                    <h2>About {this.props.title}</h2>
+                    <h2>{this.props.title}</h2>
                     <p className="p-left">{detailMovie}</p>
                 </div>);
     }

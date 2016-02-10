@@ -3,22 +3,26 @@ var React = require('react');
 var Cast = React.createClass({
 
     getInitialState: function() {
-        return {};
+        return {
+            castList: []
+        };
     },
 
-    componentDidMount: function() {
+    componentWillReceiveProps: function(nextProps){
+        var castList = []
+        console.log(nextProps)
+        nextProps.castList.forEach(function(cast) {
+            castList.push(<li>
+                    {cast.name}
+                </li>)
+        });
+
+        this.setState({castList: castList});
     },
 
     render: function() {
-        // var stars = [],
-        //     rate = 0,
-        //     rating = Math.round(this.props.stars) / 2
 
-        // for (var i = 0; i < this.props.totalStars; i++) {
-        //     rate = i + 1;
-        // }
-
-        return (<div>gaga</div>);
+        return (<ul>{this.state.castList}</ul>);
     }
 });
 
