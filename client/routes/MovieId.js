@@ -1,20 +1,15 @@
 var Peer = require('simple-peer')
 var React = require('react')
 var PlayerMovieId = require('../components/PlayerMovieId')
-var DescriptionMovieId = require('../components/DescriptionMovieId')
+var DetailMovie = require('../components/DetailMovie')
 
 var MovieId = React.createClass({
 
     getInitialState: function() {
         return {
-            isDescription: true,
             movie: [],
             torrentlist: []
         };
-    },
-
-    handleClick: function(event) {
-        this.setState({isDescription: !this.state.isDescription});
     },
 
     componentDidMount: function() {
@@ -32,64 +27,34 @@ var MovieId = React.createClass({
     },
 
     render: function() {
-        console.log(this.state)
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
 
-        var toggleShow = this.state.isDescription ? <DescriptionMovieId movie={this.state.movie}/> : <PlayerMovieId />;
-        // var isSupported;
-        // if (WebTorrent.WEBRTC_SUPPORT) {
-        //     isSupported = (<div>Yes</div>)
-        // } else {
-        //     isSupported = (<div>No</div>)
-        // }
-
-console.log(this.state.movie.cast)
-        return (<div><div className="movie-cover top" style={backgroundImage}>
-                    <div className="container">
+        return (<div className="container-fluid">
+                    <div className="movie-cover top" style={backgroundImage}>
+                        <div className="container">
+                            <div className="row">
+                            <div className="col-md-12 center">
+                                <img src={this.state.movie.medium_cover_image} />
+                            </div>
+                                <div className="col-md-6">
+                                    <a href="#">Play Movie</a>
+                                </div>
+                                <div className="col-md-6">
+                                    <a href="#">Trailer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container top-p">
                         <div className="row">
-                        <div className="col-md-12 center">
-                            <img src={this.state.movie.medium_cover_image} />
-                        </div>
-                            <div className="col-md-6">
-                                <a href="#">Play Movie</a>
-                            </div>
-                            <div className="col-md-6">
-                                <a href="#">Trailer</a>
-                            </div>
+                            <DetailMovie col="col-md-12" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
+                            <DetailMovie col="col-md-4" title="Movie Information" data={this.state.movie} typeDetail="more_information" />
+                            <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
+                            <DetailMovie col="col-md-4" title="Cast" data={this.state.movie.cast} typeDetail="cast" />
                         </div>
                     </div>
-                </div>
-                <div className="container top-p">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h2>About {this.state.movie.title}</h2>
-                            <p className="p-left">{this.state.movie.description_full}</p>
-                        </div>
-                        <div className="col-md-4">
-                            <h2>Movie Information</h2>
-                            <p className="p-left">
-                                Year: {this.state.movie.year}<br/>
-                                Rating: {this.state.movie.rating}<br/>
-                                Movie Length: {this.state.movie.runtime}<br/>
-                                Genre: {this.state.movie.genres}<br/>
-                                Language: {this.state.movie.language}<br/>
-                                MPA Rating: {this.state.movie.mpa_rating}
-                            </p>
-                        </div>
-                        <div className="col-md-8">
-                            <h3>Suggested</h3>
-                            <p className="p-left"></p>
-                        </div>
-                        <div className="col-md-4">
-                            <h3>Cast</h3>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
                 </div>);
     }
 });
