@@ -29,10 +29,15 @@ var Movie = React.createClass({
                           background: 'url(' + object.medium_cover_image + ') center'
                         };
                         var moviesUrl = "/movies/" + object.id;
-                        return (<a className="col-lg-2 col-md-2 col-sm-3 col-xs-4 movie-card" href={moviesUrl}>
+                        return (<a className="col-md-2 col-xs-3" href={moviesUrl}>
  
-                                <img className="img-responsive" src={object.medium_cover_image} />
-                                <div className="rating"><span className="label label-warning">{object.rating}</span></div>
+                                <img className="width" src={object.medium_cover_image} />
+                                <div className="information">
+                                    <p className="title">The Hobbit: The Battle of the Five Armies</p>
+                                    <p className="rating">
+                                        <i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-starr"></i><i className="fa fa-star"></i> 
+                                    </p>
+                                </div>
                         </a>)
                     })}
                 </div>

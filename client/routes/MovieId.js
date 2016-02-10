@@ -45,7 +45,8 @@ var MovieId = React.createClass({
         //     isSupported = (<div>No</div>)
         // }
 
-        return (<div className="movie-visual">
+        return (<div className="container top">
+            <div className="movie-visual">
                     <div className="movie-information" style={backgroundImage}>
                         <div className="shadow"></div>
                         <div className="container">
@@ -67,6 +68,7 @@ var MovieId = React.createClass({
                         </div>
                     </div>
                 </div>
+            </div>
             );
     }
 });
