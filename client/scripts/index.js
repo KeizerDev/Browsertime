@@ -1,6 +1,6 @@
 var React = require('react'),
 	Router = require('react-router');
-	
+
 var Header = React.createClass({
 	render: function() {
 		return (<header id="header">
@@ -44,10 +44,10 @@ var PageNav = React.createClass({
         }
     },
 	render: function() {
-		return (
+            // <li><Router.Link to="series">TV Series</Router.Link></li>
+    		return (
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
-						<li><Router.Link to="series">TV Series</Router.Link></li>
 						<li><i className="glyphicon glyphicon-search"></i></li>
 					</ul>
 		);
