@@ -52,26 +52,30 @@ var MovieId = React.createClass({
                             <img src={this.state.movie.medium_cover_image} />
                         </div>
                             <div className="col-md-6">
-                                <a>Play Movie</a>
+                                <a href="#">Play Movie</a>
                             </div>
                             <div className="col-md-6">
-                                <a>Trailer</a>
+                                <a href="#">Trailer</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="container top">
+                <div className="container top-p">
                     <div className="row">
                         <div className="col-md-12">
                             <h2>About {this.state.movie.title}</h2>
-                            <p className="p-left">{this.state.movie.description_intro}</p>
+                            <p className="p-left">{this.state.movie.description_full}</p>
                         </div>
                         <div className="col-md-6">
                             <h3>Movie Information</h3>
                             <p className="p-left">
                                 Year: {this.state.movie.year}<br/>
                                 Rating: {this.state.movie.rating}<br/>
-                                Movie Length: {this.state.movie.runtime}
+                                Movie Length: {this.state.movie.runtime}<br/>
+                                Genre: {this.state.movie.genres}<br/>
+                                Language: {this.state.movie.language}<br/>
+                                MPA Rating: {this.state.movie.mpa_rating}
+
                             </p>
                         </div>
                         <div className="col-md-6">

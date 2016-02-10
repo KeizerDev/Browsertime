@@ -132,11 +132,22 @@ p.p-left {padding-left:22px;}
 
 .movie-cover {
   width: 100%;
+  background: url(https://www.popcorntime.ws/nl/assets/images/blur.png);
 }
 
 .movie-cover.top .container .row .col-md-12 {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.movie-cover.top .container .row .col-md-12 img {
+    width: 230px;
+    border: 4px solid white;
+}
+
+.top-p {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .fa {
@@ -213,6 +224,31 @@ h3 {
   padding-left: 13px;
 }
 
+footer {
+  background-color: @body-grey;
+  color: white;
+
+  .container {
+    padding: 50px;
+
+    .row {
+      padding-left: 0px;
+      padding-right: 0px;
+
+      .col-md-2 {
+
+        select {
+          width: 100%;
+          height: 40px;
+          color: white;
+          background: transparent;
+          border: 2px white solid;
+          outline: none;
+        }
+      }
+    }
+  }
+}
 
 
 /*
