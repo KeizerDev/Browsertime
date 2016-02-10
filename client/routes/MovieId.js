@@ -36,7 +36,7 @@ var MovieId = React.createClass({
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
-        
+
         var toggleShow = this.state.isDescription ? <DescriptionMovieId movie={this.state.movie}/> : <PlayerMovieId />;
         // var isSupported;
         // if (WebTorrent.WEBRTC_SUPPORT) {
@@ -45,6 +45,7 @@ var MovieId = React.createClass({
         //     isSupported = (<div>No</div>)
         // }
 
+console.log(this.state.movie.cast)
         return (<div><div className="movie-cover top" style={backgroundImage}>
                     <div className="container">
                         <div className="row">
@@ -83,7 +84,9 @@ var MovieId = React.createClass({
                         </div>
                         <div className="col-md-4">
                             <h3>Cast</h3>
-                            <p></p>
+                            <p>
+
+                            </p>
                         </div>
                     </div>
                 </div>
