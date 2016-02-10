@@ -1,10 +1,19 @@
 // Import Bootstrap
 @header-height: 75px;
-@header-color: #ffffff;
+@header-white: #ffffff;
+@header-grey: #252525;
+@theme-white: #000000;
+@theme-grey: #ffffff;
+@body-grey: #3D3D3D;
+@body-white: #FFFFFF;
 @text-red: #C1272D;
 
+body {
+  background-color: @header-white;
+}
+
 header {
-  background: @header-color;
+  background: @header-white;
   height: @header-height;
   position: fixed;
   left: 0;
@@ -31,6 +40,7 @@ header {
       line-height: @header-height;
       margin-left: 10px;
       letter-spacing: 1px;
+      color: @theme-white;
     }
 
     ul {
@@ -41,7 +51,7 @@ header {
         float: left;
         line-height: 75px;
         padding: 0px 20px;
-        color: black;
+        color: @theme-white;
         text-transform: uppercase;
         font-weight: bold;
         display: block;
@@ -56,7 +66,7 @@ header {
 
         a {
           text-decoration: none;
-          color: black;
+          color: @theme-white;
 
           &:hover {
             color: @text-red;
@@ -96,12 +106,16 @@ header {
 }
 
 .fa {
-      padding-left: 2px;
+    padding-left: 2px;
     padding-right: 2px;
 }
 
+.active {
+  color: #F3CB0B;
+}
+
 .glyphicon {
-  color: black;
+  color: @theme-white;
 }
 
 .glyphicon:hover {
@@ -115,7 +129,7 @@ header {
   opacity: 0.99;
 }
 
-.container.top {
+.top {
   padding-top: 75px;
   padding-bottom: 15px;
 }
