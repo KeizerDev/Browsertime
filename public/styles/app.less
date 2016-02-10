@@ -21,6 +21,7 @@ header {
   width: 100%;
   z-index: 999;
   transition: all 0.2s ease-in-out;
+  border-bottom: 1px #ECECEC solid;
 
   .container {
 
@@ -108,7 +109,7 @@ header {
       opacity: 1;
     }
 }
-.col-md-6 {margin-top: 15px;}
+.col-md-6 {margin-bottom: 30px;}
 p.p-left {padding-left:22px;}
 .col-md-6 a {
     color: white;
@@ -130,9 +131,20 @@ p.p-left {padding-left:22px;}
     transition: color, 0.4s, ease-in-out;
 }
 
+.col-md-6 a:hover {
+ background: white;
+ color: black;
+}
+
 .movie-cover {
   width: 100%;
-  background: url(https://www.popcorntime.ws/nl/assets/images/blur.png);
+
+}
+
+.movie-underlay {
+    background: url(http://www.orville.com/images/parallax/img-background.jpg) center / cover;
+    width: 100%;
+    height: auto;
 }
 
 .movie-cover.top .container .row .col-md-12 {
@@ -207,7 +219,7 @@ h3 {
 }
 
 .top {
-  padding-top: 75px;
+  padding-top: 90px;
   padding-bottom: 15px;
 }
 
@@ -217,6 +229,8 @@ h3 {
 
 .container.top .col-md-2 {
   padding: 2px;
+      transform: scale(1);
+    transition: transform .3s ease-in-out;
 }
 
 .row {
@@ -243,6 +257,7 @@ footer {
           color: white;
           background: transparent;
           border: 2px white solid;
+          border-radius: 0px !important;
           outline: none;
         }
       }
@@ -250,7 +265,9 @@ footer {
   }
 }
 
-
+.clear {
+  height: 1px;
+}
 /*
 * Mixins
 */

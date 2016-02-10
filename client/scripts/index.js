@@ -20,9 +20,7 @@ var Footer = React.createClass({
 		return (<footer>
 					<div className="container">
 						<div className="row">
-							<div className="col-md-10">
-								Made with a bunch of ♥ || Support this project: 146z8MPUeogNxpT3ptpBWjr6rkpviGd4JG
-							</div>
+							<div className="col-md-10"></div>
 							<div className="col-md-2">
 								<select>
 <option value="">Country...</option>

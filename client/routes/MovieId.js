@@ -36,7 +36,7 @@ var MovieId = React.createClass({
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
-
+        
         var toggleShow = this.state.isDescription ? <DescriptionMovieId movie={this.state.movie}/> : <PlayerMovieId />;
         // var isSupported;
         // if (WebTorrent.WEBRTC_SUPPORT) {
@@ -66,8 +66,8 @@ var MovieId = React.createClass({
                             <h2>About {this.state.movie.title}</h2>
                             <p className="p-left">{this.state.movie.description_full}</p>
                         </div>
-                        <div className="col-md-6">
-                            <h3>Movie Information</h3>
+                        <div className="col-md-4">
+                            <h2>Movie Information</h2>
                             <p className="p-left">
                                 Year: {this.state.movie.year}<br/>
                                 Rating: {this.state.movie.rating}<br/>
@@ -75,12 +75,15 @@ var MovieId = React.createClass({
                                 Genre: {this.state.movie.genres}<br/>
                                 Language: {this.state.movie.language}<br/>
                                 MPA Rating: {this.state.movie.mpa_rating}
-
                             </p>
                         </div>
-                        <div className="col-md-6">
-                            <h3>Cast</h3>
+                        <div className="col-md-8">
+                            <h3>Suggested</h3>
                             <p className="p-left"></p>
+                        </div>
+                        <div className="col-md-4">
+                            <h3>Cast</h3>
+                            <p></p>
                         </div>
                     </div>
                 </div>
