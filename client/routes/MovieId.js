@@ -46,6 +46,8 @@ var MovieId = React.createClass({
         // }
 
         return (<div className="container-fluid top">
+                    <div className=""></div>
+                </div>
             <div className="movie-visual">
                     <div className="movie-information" style={backgroundImage}>
                         <div className="shadow"></div>
