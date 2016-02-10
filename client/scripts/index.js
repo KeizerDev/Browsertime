@@ -7,9 +7,9 @@ var Header = React.createClass({
 					<div className="container">
 						<div className="logo">
 							<img src="http://localhost:8080/assets/img/z.svg" />
-						</div>
+    					</div>
 						<div className="logo-text">BrowserTime</div>
-					<PageNav />
+	       				<PageNav />
 					</div>
 				</header>);
 	}
@@ -56,7 +56,7 @@ var PageNav = React.createClass({
 
 var App = React.createClass({
 	render: function() {
-		return (<div className="">
+		return (<div className="test">
 				<Header />
 				<Router.RouteHandler/>
 				<Footer/>
