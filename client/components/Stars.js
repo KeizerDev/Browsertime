@@ -10,20 +10,25 @@ var Stars = React.createClass({
     },
 
     render: function() {
-        var num = Math.round(this.props.stars * 2) / 2
-        var stars = []
+        var stars = [],
+            rate = 0,
+            rating = Math.round(this.props.stars) / 2
+
         for (var i = 0; i < this.props.totalStars; i++) {
-            if ((i * 2) <= num) {
+            rate = i + 1;
+
+            if (rate <= rating) {
                 stars.push(<i className="fa fa-star active"></i>)
-            } else if ((i * 2)-1 == num) {
+            } else if ((rate - 0.5) == rating) {
                 stars.push(<i className="fa fa-star-half-o active"></i>)
             } else {
                 stars.push(<i className="fa fa-star-o"></i>)
             }
         }
+
         return (<div>
-                {stars}
-            </div>);
+            {stars}
+        </div>);
     }
 });
 
