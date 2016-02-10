@@ -67,7 +67,7 @@ router.get('/search/:query', function(req, res) {
 });
 
 router.get('/movie/:id', function(req, res) {
-    request('https://yts.ag/api/v2/movie_details.json?with_images=true&movie_id=' + req.params.id, function (error, response, body) {
+    request('https://yts.ag/api/v2/movie_details.json?with_images=true&with_cast=true&movie_id=' + req.params.id, function (error, response, body) {
         res.json(JSON.parse(body));
     });
 });
