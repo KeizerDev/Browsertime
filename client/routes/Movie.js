@@ -23,24 +23,25 @@ var Movie = React.createClass({
         console.log(this.state.movies)
 		return (
             <div className="container top">
-                <div className="row">
+                <ul className="row">
                     {this.state.movies.map(function(object, i){
                         var divStyle = {
                           background: 'url(' + object.medium_cover_image + ') center'
                         };
                         var moviesUrl = "/movies/" + object.id;
                         return (<a className="col-md-2 col-xs-3" href={moviesUrl}>
- 
-                                <img className="width" src={object.medium_cover_image} />
-                                <div className="information">
-                                    <p className="title">The Hobbit: The Battle of the Five Armies</p>
-                                    <p className="rating">
-                                        <i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-starr"></i><i className="fa fa-star"></i> 
-                                    </p>
+                                <div className="col-movie">
+                                    <img className="width" src={object.medium_cover_image} />
+                                    <div className="information">
+                                        <p className="title">The Hobbit: The Battle of the Five Armies</p>
+                                        <p className="rating">
+                                            <i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-starr"></i><i className="fa fa-star"></i>
+                                        </p>
+                                    </div>
                                 </div>
                         </a>)
                     })}
-                </div>
+                </ul>
             </div>
 		);
 	}
