@@ -37,7 +37,7 @@ var Movie = React.createClass({
                                     <div className="information">
                                         <p className="title">The Hobbit: The Battle of the Five Armies</p>
                                         <p className="rating">
-                                            <Stars count={object.rating} />
+                                            <Stars stars={object.rating} totalStars="5" />
                                         </p>
                                     </div>
                                 </div>

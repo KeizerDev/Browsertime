@@ -10,9 +10,9 @@ var Stars = React.createClass({
     },
 
     render: function() {
-        var num = Math.round(this.props.count * 2) / 2
+        var num = Math.round(this.props.stars * 2) / 2
         var stars = []
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < this.props.totalStars; i++) {
             if ((i * 2) <= num) {
                 stars.push(<i className="fa fa-star active"></i>)
             } else if ((i * 2)-1 == num) {
