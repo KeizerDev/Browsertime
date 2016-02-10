@@ -1,4 +1,6 @@
-var React = require('react');
+var React = require('react'),
+    Stars = require('../components/Stars')
+
 
 var Movie = React.createClass({
 
@@ -23,7 +25,7 @@ var Movie = React.createClass({
         console.log(this.state.movies)
 		return (
             <div className="container top">
-                <ul className="row">
+                <div className="row">
                     {this.state.movies.map(function(object, i){
                         var divStyle = {
                           background: 'url(' + object.medium_cover_image + ') center'
@@ -35,13 +37,13 @@ var Movie = React.createClass({
                                     <div className="information">
                                         <p className="title">The Hobbit: The Battle of the Five Armies</p>
                                         <p className="rating">
-                                            <i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-star active"></i><i className="fa fa-starr"></i><i className="fa fa-star"></i>
+                                            <Stars count={object.rating} />
                                         </p>
                                     </div>
                                 </div>
                         </a>)
                     })}
-                </ul>
+                </div>
             </div>
 		);
 	}
