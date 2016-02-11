@@ -38,10 +38,10 @@ var MovieId = React.createClass({
                             <div className="col-md-12 center">
                                 <img src={this.state.movie.medium_cover_image} />
                             </div>
-                                <div className="col-md-6">
+                                <div className="col-md-6 btn-movieid">
                                     <a href="#">Play Movie</a>
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-6 btn-movieid">
                                     <a href="#">Trailer</a>
                                 </div>
                             </div>
