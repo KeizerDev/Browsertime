@@ -14,8 +14,7 @@ var Cast = React.createClass({
         nextProps.castList.forEach(function(cast) {
             castList.push(<li>
                     <img src={cast.url_small_image} className="img-circle"/>
-                    {cast.name} -->
-                    {cast.character_name}
+                    <a href="http://www.imdb.com/name/nm">{cast.name}</a> as {cast.character_name}
                 </li>)
         });
 

@@ -49,7 +49,7 @@ var MovieId = React.createClass({
                     </div>
                     <div className="container top-p">
                         <div className="row">
-                            <DetailMovie col="col-md-12" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
+                            <DetailMovie col="col-md-8" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
                             <DetailMovie col="col-md-4" title="Movie Information" data={this.state.movie} typeDetail="more_information" />
                             <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
                             <DetailMovie col="col-md-4" title="Cast" data={this.state.movie.cast} typeDetail="cast" />
