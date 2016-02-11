@@ -30,6 +30,7 @@ var MovieId = React.createClass({
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
+        //<DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
 
         return (<div className="container-fluid">
                     <div className="movie-cover top" style={backgroundImage}>
