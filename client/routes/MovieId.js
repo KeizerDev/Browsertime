@@ -30,6 +30,7 @@ var MovieId = React.createClass({
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
+        //<DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
 
         return (<div className="container-fluid">
                     <div className="movie-cover top" style={backgroundImage}>
@@ -51,7 +52,15 @@ var MovieId = React.createClass({
                         <div className="row">
                             <DetailMovie col="col-md-8" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
                             <DetailMovie col="col-md-4" title="Movie Information" data={this.state.movie} typeDetail="more_information" />
-                            <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
+                            <div className="col-md-8">
+                                <h2>Suggested</h2>
+                                <p className="p-left">
+                                    <img width="25%" src="https://yts.ag/assets/images/movies/steve_jobs_2015/medium-cover.jpg" />
+                                    <img width="25%" src="https://yts.ag/assets/images/movies/JOBS_2013/medium-cover.jpg" />
+                                    <img width="25%" src="https://yts.ag/assets/images/movies/my_all_american_2015/medium-cover.jpg" />
+                                    <img width="25%" src="https://yts.ag/assets/images/movies/Rescue_Dawn_2006/medium-cover.jpg" />
+                                </p>
+                            </div>
                             <DetailMovie col="col-md-4" title="Cast" data={this.state.movie.cast} typeDetail="cast" />
                         </div>
                     </div>

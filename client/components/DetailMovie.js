@@ -23,12 +23,14 @@ var DetailMovie = React.createClass({
             break;
             case "more_information":
                 detailMovie = <div>
-                            Rating: <Stars stars={this.props.data.rating} totalStars="5" /><br/>
-                            Year: {this.props.data.year}<br/>
-                            Movie Length: {this.props.data.runtime}<br/>
-                            Genre: {this.props.data.genres}<br/>
-                            Language: {this.props.data.language}<br/>
-                            MPA Rating: {this.props.data.mpa_rating}
+                                <ul>
+                                    <li><Stars stars={this.props.data.rating} totalStars="5" /></li>
+                                    <li><b>Release Year:</b> {this.props.data.year}</li>
+                                    <li>{this.props.data.runtime} <b>Minutes</b></li>
+                                    <li><b>Genre:</b> {this.props.data.genres}</li>
+                                    <li><b>Language:</b> {this.props.data.language}</li>
+                                    <li><b>MPA Rating:</b> {this.props.data.mpa_rating}</li>
+                                </ul>
                         </div>
             break;
         }
