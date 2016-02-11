@@ -1,6 +1,7 @@
 var React = require('react');
 var Stars = require('../components/Stars')
 var Cast = require('../components/Cast')
+var RelatedMovie = require('../components/RelatedMovie')
 
 var DetailMovie = React.createClass({
 
@@ -30,6 +31,9 @@ var DetailMovie = React.createClass({
                             Language: {this.props.data.language}<br/>
                             MPA Rating: {this.props.data.mpa_rating}
                         </div>
+            break;
+            case "related":
+                detailMovie = <RelatedMovie movieList={this.props.data} />
             break;
         }
 

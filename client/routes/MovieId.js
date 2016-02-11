@@ -51,7 +51,7 @@ var MovieId = React.createClass({
                         <div className="row">
                             <DetailMovie col="col-md-8" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
                             <DetailMovie col="col-md-4" title="Movie Information" data={this.state.movie} typeDetail="more_information" />
-                            <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
+                            <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.cast} typeDetail="related" />
                             <DetailMovie col="col-md-4" title="Cast" data={this.state.movie.cast} typeDetail="cast" />
                         </div>
                     </div>
