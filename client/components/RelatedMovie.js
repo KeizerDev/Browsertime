@@ -1,4 +1,5 @@
 var React = require('react');
+var Stars = require('../components/Stars')
 
 var RelatedMovie = React.createClass({
 
@@ -11,19 +12,19 @@ var RelatedMovie = React.createClass({
     componentWillReceiveProps: function(nextProps){
         var movieList = []
         console.log(nextProps)
-        nextProps.movieList.map(function(cast, i){
-            movieList.push(<a className="col-md-2 col-xs-4" href="/movies/12">
+        nextProps.movieList.map(function(movie, i){
+            movieList.push(<a className="col-md-3 col-xs-3" href="/movies/12">
                                 <div className="col-movie">
-                                    <img className="width" src={cast.url_small_image} />
+                                    <img className="width" src={movie.cover} />
                                     <div className="information">
-                                        <p className="title">{cast.name}</p>
+                                        <p className="title">{movie.title}</p>
                                         <p className="rating">
+                                            <Stars stars={movie.rating} totalStars="5" />
                                         </p>
                                     </div>
                                 </div>
                             </a>)
         });
-                                            // <Stars stars="5" totalStars="5" />
 
         this.setState({movieList: movieList});
     },
