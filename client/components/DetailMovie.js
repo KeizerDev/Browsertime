@@ -14,6 +14,29 @@ var DetailMovie = React.createClass({
 
     render: function() {
         var detailMovie = ""
+        var movieList = [
+            {
+                title: "The Last Stand",
+                rating: "5.9",
+                cover: "http://www.gstatic.com/tv/thumb/movieposters/9337470/p9337470_p_v8_ac.jpg"
+            },
+            {
+                title: "Batman Returns",
+                rating: "9.3",
+                cover: "http://www.gstatic.com/tv/thumb/iconics/12631/p12631_i_v8_aa.jpg"
+            },
+            {
+                title: "The Revenant",
+                rating: "8.6",
+                cover: "http://static.rogerebert.com/uploads/movie/movie_poster/the-revenant-2015/large_large_oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg"
+            },
+            {
+                title: "The Revenant",
+                rating: "8.6",
+                cover: "http://static.rogerebert.com/uploads/movie/movie_poster/the-revenant-2015/large_large_oXUWEc5i3wYyFnL1Ycu8ppxxPvs.jpg"
+            }
+        ]
+
 
         switch(this.props.typeDetail) {
             case "text":
@@ -35,7 +58,7 @@ var DetailMovie = React.createClass({
                         </div>
             break;
             case "related":
-                detailMovie = <RelatedMovie movieList={this.props.data} />
+                detailMovie = <RelatedMovie movieList={movieList} />
             break;
         }
 
