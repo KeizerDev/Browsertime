@@ -18,6 +18,8 @@ var Cast = React.createClass({
                         <a href="http://www.imdb.com/name/nm">{cast.name}</a> as {cast.character_name}
                     </li>)
             });
+        } else {
+            console.error("No cast list found.")
         }
 
         this.setState({castList: castList});
