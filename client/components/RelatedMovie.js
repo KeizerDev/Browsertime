@@ -13,7 +13,7 @@ var RelatedMovie = React.createClass({
         var movieList = []
 
         nextProps.movieList.map(function(movie, i){
-            movieList.push(<a className="col-md-3 col-xs-6" href="/movies/12">
+            movieList.push(<a className="col-md-3 col-xs-6 no-padding" href="/movies/12">
                                 <div className="col-movie">
                                     <img className="width" src={movie.cover} />
                                     <div className="information">
