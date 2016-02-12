@@ -28,8 +28,7 @@ var Movie = React.createClass({
                 <div className="row">
                     {this.state.movies.map(function(movie, i){
                         var moviesUrl = "/movies/" + movie.id;
-                        return (
-                            <MovieItem className="col-md-2 col-xs-4" cover={movie.medium_cover_image} title={movie.title} rating={movie.rating} url={moviesUrl} />)
+                        return (<MovieItem className="col-md-2 col-xs-4" cover={movie.medium_cover_image} title={movie.title} rating={movie.rating} url={moviesUrl} />)
                     })}
                 </div>
             </div>
