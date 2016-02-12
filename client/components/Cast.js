@@ -8,15 +8,17 @@ var Cast = React.createClass({
         };
     },
 
-    componentWillReceiveProps: function(nextProps){
+    componentWillReceiveProps: function(props){
         var castList = []
 
-        nextProps.castList.forEach(function(cast) {
-            castList.push(<li>
-                    <img src={cast.url_small_image} className="img-circle"/>
-                    <a href="http://www.imdb.com/name/nm">{cast.name}</a> as {cast.character_name}
-                </li>)
-        });
+        if (props.castList) {
+            props.castList.forEach(function(cast) {
+                castList.push(<li>
+                        <img src={cast.url_small_image} className="img-circle"/>
+                        <a href="http://www.imdb.com/name/nm">{cast.name}</a> as {cast.character_name}
+                    </li>)
+            });
+        }
 
         this.setState({castList: castList});
     },

@@ -43,7 +43,7 @@ var DetailMovie = React.createClass({
                 detailMovie = this.props.data
             break;
             case "cast":
-                detailMovie = <Cast castList={this.props.data}/>
+                detailMovie = <Cast castList={this.props.data} />
             break;
             case "more_information":
                 detailMovie = <div>
