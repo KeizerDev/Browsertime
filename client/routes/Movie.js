@@ -1,6 +1,6 @@
 var React = require('react'),
-    Stars = require('../components/Stars')
-
+    Stars = require('../components/Stars'),
+    MovieItem = require('../components/MovieItem')
 
 var Movie = React.createClass({
 
@@ -26,22 +26,10 @@ var Movie = React.createClass({
 		return (
             <div className="container top">
                 <div className="row">
-                    {this.state.movies.map(function(object, i){
-                        var divStyle = {
-                          background: 'url(' + object.medium_cover_image + ') center'
-                        };
-                        var moviesUrl = "/movies/" + object.id;
-                        return (<a className="col-md-2 col-xs-4" href={moviesUrl}>
-                                <div className="col-movie">
-                                    <img className="width" src={object.medium_cover_image} />
-                                    <div className="information">
-                                        <p className="title">{object.title}</p>
-                                        <p className="rating">
-                                            <Stars stars={object.rating} totalStars="5" />
-                                        </p>
-                                    </div>
-                                </div>
-                        </a>)
+                    {this.state.movies.map(function(movie, i){
+                        var moviesUrl = "/movies/" + movie.id;
+                        return (
+                            <MovieItem className="col-md-2 col-xs-4" cover={movie.medium_cover_image} title={movie.title} rating={movie.rating} url={moviesUrl} />)
                     })}
                 </div>
             </div>
