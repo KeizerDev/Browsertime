@@ -10,7 +10,7 @@ var Cast = React.createClass({
 
     componentWillReceiveProps: function(nextProps){
         var castList = []
-        console.log(nextProps)
+
         nextProps.castList.forEach(function(cast) {
             castList.push(<li>
                     <img src={cast.url_small_image} className="img-circle"/>

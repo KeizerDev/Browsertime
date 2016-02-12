@@ -1,6 +1,6 @@
 var Peer = require('simple-peer')
 var React = require('react')
-var PlayerMovieId = require('../components/PlayerMovieId')
+var TrailerMovieId = require('../components/TrailerMovieId')
 var DetailMovie = require('../components/DetailMovie')
 
 var MovieId = React.createClass({
@@ -8,8 +8,13 @@ var MovieId = React.createClass({
     getInitialState: function() {
         return {
             movie: [],
-            torrentlist: []
+            torrentlist: [],
+            isTrailer: false
         };
+    },
+
+    handleClick: function(event) {
+        this.setState({isTrailer: !this.state.isTrailer});
     },
 
     componentDidMount: function() {
@@ -23,27 +28,27 @@ var MovieId = React.createClass({
             });
           }
         }.bind(this));
-        // this.initTorrent()
     },
 
     render: function() {
         var backgroundImage = {
             background: 'url(' + this.state.movie.background_image + ') center / cover'
         };
-        //<DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.description_full} typeDetail="text" />
+
+        var toggleTrailer = this.state.isTrailer ? <TrailerMovieId ytCode={this.state.movie.yt_trailer_code} /> :  <img src={this.state.movie.medium_cover_image} /> ;
 
         return (<div className="container-fluid">
                     <div className="movie-cover top" style={backgroundImage}>
                         <div className="container">
                             <div className="row">
                             <div className="col-md-12 center">
-                                <img src={this.state.movie.medium_cover_image} />
+                                {toggleTrailer}
                             </div>
                                 <div className="col-md-6 btn-movieid">
                                     <a href="#">Play Movie</a>
                                 </div>
                                 <div className="col-md-6 btn-movieid">
-                                    <a href="#">Trailer</a>
+                                    <a href="#" onClick={this.handleClick}>Trailer</a>
                                 </div>
                             </div>
                         </div>

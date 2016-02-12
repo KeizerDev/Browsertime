@@ -11,7 +11,7 @@ var RelatedMovie = React.createClass({
 
     componentWillReceiveProps: function(nextProps){
         var movieList = []
-        console.log(nextProps)
+
         nextProps.movieList.map(function(movie, i){
             movieList.push(<a className="col-md-3 col-xs-3" href="/movies/12">
                                 <div className="col-movie">
