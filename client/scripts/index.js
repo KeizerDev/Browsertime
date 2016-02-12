@@ -303,7 +303,6 @@ var PageNav = React.createClass({
     		return (
 					<ul>
 						<li><Router.Link to="movies">Movies</Router.Link></li>
-						<li><Router.Link to="series">TV Series</Router.Link></li>
 						<li><i className="glyphicon glyphicon-search"></i></li>
 					</ul>
 		);
