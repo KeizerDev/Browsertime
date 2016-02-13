@@ -6,7 +6,8 @@ var Movie = React.createClass({
 
     getInitialState: function() {
         return {
-            movies: []
+            movies: [],
+            isLoaded: false
         };
     },
 
@@ -15,7 +16,8 @@ var Movie = React.createClass({
           var movies = result['data'].movies;
           if (this.isMounted()) {
             this.setState({
-              movies: movies
+              movies: movies,
+              isLoaded: true
             });
           }
         }.bind(this));
@@ -26,10 +28,15 @@ var Movie = React.createClass({
 		return (
             <div className="container top">
                 <div className="row">
-                    {this.state.movies.map(function(movie, i){
+                {
+                    !this.state.isLoaded ?
+                        <img className="col-md-offset-5 col-md-2 col-xs-offset-5 col-xs-2" src="http://placehold.it/300x300" />
+
+                    : this.state.movies.map(function(movie, i){
                         var moviesUrl = "/movies/" + movie.id;
                         return (<MovieItem className="col-md-2 col-xs-4" cover={movie.medium_cover_image} title={movie.title} rating={movie.rating} url={moviesUrl} />)
-                    })}
+                    })
+                }
                 </div>
             </div>
 		);
