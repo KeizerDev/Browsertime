@@ -1,4 +1,3 @@
-var Peer = require('simple-peer')
 var React = require('react')
 var WebTorrent = require('webtorrent')
 var TrailerMovieId = require('../components/TrailerMovieId')
