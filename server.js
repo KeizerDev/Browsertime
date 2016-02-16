@@ -5,8 +5,6 @@ var browserify = require('browserify-middleware');
 var less = require('less-middleware');
 var nunjucks = require('nunjucks');
 var config = require('./client/config');
-var parseTorrent = require('parse-torrent')
-var magnet = require('magnet-uri')
 
 // initialise express
 var app = express();
