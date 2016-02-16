@@ -30,11 +30,11 @@ var MovieId = React.createClass({
                 });
             }
         }.bind(this));
-        this.initWebtorrent();
     },
 
-    initWebtorrent: function() {
+    handlePlayMovieClick: function(event) {
         var client = new WebTorrent()
+        console.log(this.state.movie.hashes[1])
         var magnetURI = this.state.movie.hashes[1]
 
         client.add(magnetURI, function (torrent) {
@@ -44,7 +44,7 @@ var MovieId = React.createClass({
           torrent.files.forEach(function (file) {
             // Display the file by appending it to the DOM. Supports video, audio, images, and
             // more. Specify a container element (CSS selector or reference to DOM node).
-            file.appendTo('body')
+            file.appendTo('.play-container')
           })
         })
     },
@@ -56,11 +56,11 @@ var MovieId = React.createClass({
                     <div className="movie-cover top">
                         <div className="container">
                             <div className="row">
-                            <div className="col-md-12 center">
+                            <div className="col-md-12 center play-container">
                                 {toggleTrailer}
                             </div>
                                 <div className="col-md-6 btn-movieid">
-                                    <a href="#">Play Movie</a>
+                                    <a href="#" onClick={this.handlePlayMovieClick}>Play Movie</a>
                                 </div>
                                 <div className="col-md-6 btn-movieid">
                                     <a href="#" onClick={this.handleClick}>Trailer</a>

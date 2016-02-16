@@ -43,7 +43,7 @@ var PageNav = React.createClass({
         this.setState({text: ''});
 
         if(this.refs.userInput.getDOMNode().value != 'Search')
-        window.location = "../search/"+this.refs.userInput.getDOMNode().value;
+        window.location = "../search/" + this.refs.userInput.getDOMNode().value;
     },
     handleChange: function(e) {
         this.setState({text: e.target.value});
