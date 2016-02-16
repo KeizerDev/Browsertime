@@ -63,7 +63,7 @@ var PageNav = React.createClass({
 
 var App = React.createClass({
 	render: function() {
-		return (<div className="test">
+		return (<div className="page">
 				<Header />
 				<Router.RouteHandler/>
 				<Footer/>

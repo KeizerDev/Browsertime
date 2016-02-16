@@ -25,7 +25,7 @@ var Movie = React.createClass({
 	render: function() {
         console.log(this.state.movies)
 		return (
-            <div className="container top">
+            <div className="container top movie-content">
                 <div className="row">
                 {
                     !this.state.isLoaded ?

@@ -11,8 +11,10 @@
 @body-white: #FFFFFF;
 @text-red: #C1272D;
 
-body {
+html, body {
   background-color: @header-white;
+  height: 100%;
+  margin: 0; padding: 0;  /* to avoid scrollbars */
 }
 
 header {
@@ -80,6 +82,16 @@ header {
       }
     }
   }
+}
+.page {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.movie-content {
+    height: auto;
 }
 
 .col-movie {
@@ -284,6 +296,8 @@ h3 {
 footer {
   background-color: @body-grey;
   color: white;
+  display: table-row;
+  height: 1px;
 
   .container {
     padding: 50px;
