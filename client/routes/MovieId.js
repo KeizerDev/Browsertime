@@ -1,5 +1,6 @@
 var Peer = require('simple-peer')
 var React = require('react')
+var WebTorrent = require('webtorrent')
 var TrailerMovieId = require('../components/TrailerMovieId')
 var DetailMovie = require('../components/DetailMovie')
 
@@ -7,7 +8,10 @@ var MovieId = React.createClass({
 
     getInitialState: function() {
         return {
-            movie: [],
+            movie: {
+                images: [],
+                hashes: []
+            },
             torrentlist: [],
             isTrailer: false
         };
@@ -19,26 +23,37 @@ var MovieId = React.createClass({
 
     componentDidMount: function() {
         $.get('/api/movie/' + this.props.params.id, function(result) {
-          var movie = result['data'].movie;
-
-          if (this.isMounted()) {
-            this.setState({
-                movie: movie,
-                torrentlist: movie.torrents
-            });
-          }
+            if (this.isMounted()) {
+                this.setState({
+                    movie: result,
+                    torrentlist: result.hashes
+                });
+            }
         }.bind(this));
+        this.initWebtorrent();
+    },
+
+    initWebtorrent: function() {
+        var client = new WebTorrent()
+        var magnetURI = this.state.movie.hashes[1]
+
+        client.add(magnetURI, function (torrent) {
+          // Got torrent metadata!
+          console.log('Client is downloading:', torrent.infoHash)
+
+          torrent.files.forEach(function (file) {
+            // Display the file by appending it to the DOM. Supports video, audio, images, and
+            // more. Specify a container element (CSS selector or reference to DOM node).
+            file.appendTo('body')
+          })
+        })
     },
 
     render: function() {
-        var backgroundImage = {
-            background: 'url(' + this.state.movie.background_image + ') center / cover'
-        };
-
-        var toggleTrailer = this.state.isTrailer ? <TrailerMovieId ytCode={this.state.movie.yt_trailer_code} /> :  <img src={this.state.movie.medium_cover_image} /> ;
+        var toggleTrailer = this.state.isTrailer ? <TrailerMovieId ytCode={this.state.movie.yt_trailer_code} /> : <div id="lolllll"><img src={this.state.movie.images[1]} /></div> ;
 
         return (<div className="container-fluid">
-                    <div className="movie-cover top" style={backgroundImage}>
+                    <div className="movie-cover top">
                         <div className="container">
                             <div className="row">
                             <div className="col-md-12 center">
@@ -55,7 +70,7 @@ var MovieId = React.createClass({
                     </div>
                     <div className="container top-p">
                         <div className="row">
-                            <DetailMovie col="col-md-8" title={this.state.movie.title} data={this.state.movie.description_full} typeDetail="text" />
+                            <DetailMovie col="col-md-8" title={this.state.movie.title} data={this.state.movie.description} typeDetail="text" />
                             <DetailMovie col="col-md-4" title="Movie Information" data={this.state.movie} typeDetail="more_information" />
                             <DetailMovie col="col-md-4" title="Cast" data={this.state.movie.cast} typeDetail="cast" />
                             <DetailMovie col="col-md-8" title="Suggested" data={this.state.movie.cast} typeDetail="related" />

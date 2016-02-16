@@ -50,7 +50,7 @@ var DetailMovie = React.createClass({
                                 <ul>
                                     <li><Stars stars={this.props.data.rating} totalStars="5" /></li>
                                     <li><b>Release Year:</b> {this.props.data.year}</li>
-                                    <li>{this.props.data.runtime} <b>Minutes</b></li>
+                                    <li>{this.props.data.duration} <b>Minutes</b></li>
                                     <li><b>Genre:</b> {this.props.data.genres}</li>
                                     <li><b>Language:</b> {this.props.data.language}</li>
                                     <li><b>MPA Rating:</b> {this.props.data.mpa_rating}</li>
