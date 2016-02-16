@@ -19,15 +19,12 @@ var Footer = React.createClass({
 	render: function() {
 		return (<footer>
 					<div className="container">
-						<div className="row">
-							<div className="col-md-10"></div>
+                        <div className="row">
+                            <div className="col-md-10">
+                                <pre>Bitcoin: 1rS6g92RxHXAV3MCd42Wxr4XrVx6A4iQK</pre>
+                            </div>
 							<div className="col-md-2">
-								<select>
-                                    <option value="">Country...</option>
-                                    <option value="NL">Netherlands</option>
-                                    <option value="GB">United Kingdom</option>
-                                    <option value="US">United States of America</option>
-								</select>
+                                <a href="https://github.com/TeamBrowsertime/Browsertime-API" className="btn btn-info col-md-12" role="button">Add movies</a>
 							</div>
 						</div>
 					</div>
