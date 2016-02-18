@@ -1,23 +1,19 @@
 #Browsertime
 
-It uses http://webtorrent.io/ to stream the torrents client side and `yify/yts` to get the movies.
+Uses http://webtorrent.io/ to stream the torrents client side and uses our own [api](https://github.com/KeizerDev/Browsertime-API/) to get the movies.
 
 
-**Setup with:**  
+# Get started  
 ```
 $ npm install
-```
-
-**Start with:**
-```
-$ npm start
+$ npm start # served on localhost:3000
 ```
 
 
 ##Milestones so far
-- [x] Get movies from `yify/yts` api endpoint.
-- [ ] Make webtorrent play the selected movie in your browser
-- [ ] Get your popcorn back :D 
+- [x] Created own [api](https://github.com/KeizerDev/Browsertime-API/) 
+- [x] Make webtorrent play the selected movie in your browser
+- [ ] Keep all the movies seed. 
 
 
 ##Contribute
