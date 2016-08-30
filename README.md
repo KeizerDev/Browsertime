@@ -1,19 +1,29 @@
-#Browsertime
+<p align="center">
+    <img align="center" src="https://rawgit.com/KeizerDev/Browsertime/master/web/images/logo.svg">
+</p>
+<h1 align="center">Browsertime</h1> 
+<h2 align="center">Stream torrents in your browser Popcorn Time style!</h2> 
+<p align="center">Uses http://webtorrent.io/ to serve your movies.</p>
+<p align="center">
+    <a href="https://gitter.im/KeizerDev/Browsertime?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+        <img src="https://img.shields.io/gitter/room/KeizerDev/Browsertime.svg?style=flat-square">
+    </a>
+</p>
 
-Uses http://webtorrent.io/ to stream the torrents client side and uses our own [api](https://github.com/KeizerDev/Browsertime-API/) to get the movies.
+</hr>
 
+**Feel free to fork and build your clone with your own movies**
 
 # Get started  
 ```
 $ npm install
-$ npm start # served on localhost:3000
+$ grunt
 ```
 
 
 ##Milestones so far
-- [x] Created own [api](https://github.com/KeizerDev/Browsertime-API/) 
 - [x] Make webtorrent play the selected movie in your browser
-- [ ] Keep all the movies seed. 
+- [ ] Make the movie API modular(Make it run on any api with our format)
 
 
 ##Contribute
