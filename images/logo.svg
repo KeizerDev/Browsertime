@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="105.94559pt"
+   height="105.48603pt"
+   viewBox="0 0 105.9456 105.48603"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="moviespot-round.svg">
+  <defs
+     id="defs38">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4161">
+      <circle
+         style="fill:#c1272d;fill-opacity:1"
+         id="circle4163"
+         cx="2276.3669"
+         cy="-3090.2649"
+         transform="scale(1,-1)"
+         r="529.72803" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1055"
+     id="namedview36"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="4.695189"
+     inkscape:cx="102.18463"
+     inkscape:cy="50.935719"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g6" />
+  <metadata
+     id="metadata4">
+Created by potrace 1.13, written by Peter Selinger 2001-2015
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.1,0,0,-0.1,-174.66389,361.53972)"
+     id="g6"
+     style="fill:#000000;stroke:none">
+    <g
+       id="g4148"
+       clip-path="url(#clipPath4161)">
+      <path
+         style="fill:#c1272d;fill-opacity:1"
+         d="M 63.748047,0.00195313 C 61.513672,-0.01367187 59.607422,0.04882814 58.544922,0.17382812 31.044924,4.2988277 9.7949211,22.548831 2.1699219,48.798828 c -3.12499973,10.999999 -2.87499968,26.875001 0.75,38 2.7499997,8.749999 11.7500001,23.875002 14.7500001,24.875002 1.125,0.375 1.5,-5 1.5,-23.750002 0,-23.624998 0.125,-24.375 2.875,-26.875 1.5,-1.375 4,-3.25 5.625,-4 1.625,-0.875 2.75,-2.625 2.75,-4.25 0,-4.374999 4.25,-10.25 9.125,-12.5 5.749999,-2.75 14.25,-2.75 19,0.125 2.5,1.5 5.375,2.125 8.875,1.75 6.124999,-0.625 10.125,1.250001 11.75,5.25 0.75,2.125 2.375,3.125 6.5,3.75 8.499999,1.25 19.999998,5.5 24.124998,8.75 l 3.75,3 0.375,24.5 c 0.25,13.500002 0.625,24.500002 1,24.500002 1.625,0 7.125,-7.75 11,-15.625002 21.125,-42.999996 -7.375,-92.7500002 -54.999998,-95.99999988 -2.375,-0.18749998 -4.9375,-0.28125 -7.171875,-0.29687499 z M 99.966797,78.082031 c -1.007813,0.05273 -2.359375,0.623047 -4.171875,1.341797 -2.875,1.125 -2.875,1.375003 -2.875,27.500002 0,14.375 0.5,26.25 1,26.25 0.5,0 2.75,-1.875 5,-4.125 l 3.999998,-4.125 0,-23.375 c 0,-19.125 0.0703,-23.625002 -2.953123,-23.466799 z m -68.421875,0.0918 c -0.625,0 -1.125,10.625001 -1.125,23.499999 l 0,23.5 4.125,4 c 2.25,2.25 4.5,3.625 5,3.25 0.5,-0.5 0.875,-12.25 0.875,-26.25 l 0,-25.249999 -3.875,-1.375 c -2.25,-0.75 -4.5,-1.375 -5,-1.375 z m 18.875,4.875 0,30.999999 0,31.125 4.875,4.75 c 4.999999,4.875 5,4.875 5.75,1.875 0.375,-1.625 0.5,-17.625 0.375,-35.5 l -0.375,-32.499999 -5.25,-0.375 -5.375,-0.375 z m 21.25,0.125 0,34.749999 c 0,19.125 0.375,35.25 0.875,35.75 0.5,0.375 2.75,-1 5,-3.25 l 4.125,-4 0,-31.625 0,-31.624999 -5,0 -5,0 z"
+         transform="matrix(8.0000008,0,0,-8.0000008,1746.6389,3615.394)"
+         id="path8"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

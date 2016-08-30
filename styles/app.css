@@ -1,0 +1,275 @@
+html, body {
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* to avoid scrollbars */ }
+
+header {
+  background: #ffffff;
+  height: 75px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px #ECECEC solid; }
+  header .container .logo {
+    float: left;
+    line-height: 75px; }
+    header .container .logo img {
+      height: 38px; }
+  header .container .logo-text {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 75px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    color: #000000; }
+  header .container ul {
+    float: right;
+    list-style-type: none; }
+    header .container ul li {
+      float: left;
+      line-height: 75px;
+      padding: 0px 20px;
+      color: #000000;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block; }
+      header .container ul li .active {
+        color: #C1272D; }
+      header .container ul li:last-child {
+        padding-right: 0px; }
+      header .container ul li a {
+        text-decoration: none;
+        color: #000000; }
+        header .container ul li a:hover {
+          color: #C1272D;
+          text-decoration: none; }
+
+.page {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%; }
+
+.movie-content {
+  height: auto; }
+
+.col-movie {
+  position: relative; }
+
+.movie-cover a {
+  width: 300px; }
+
+.col-md-4 {
+  margin-bottom: 50px; }
+  .col-md-4 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .col-md-4 ul li {
+      padding: 5px;
+      width: 100%;
+      border-bottom: 1px #ECECEC solid; }
+      .col-md-4 ul li a {
+        color: black;
+        font-weight: bold; }
+      .col-md-4 ul li img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background: url(https://yts.ag/assets/images/actors/thumb/default_avatar.jpg) center/cover; }
+  .col-md-4:last-child {
+    margin-bottom: 0px; }
+
+.col-md-8 {
+  margin-bottom: 50px; }
+  .col-md-8:last-child {
+    margin-bottom: 0px; }
+
+.information {
+  opacity: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.47);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 20px 0 20px;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out; }
+  .information:hover {
+    opacity: 1; }
+
+.btn-movieid {
+  margin-bottom: 30px; }
+  .btn-movieid a {
+    color: white;
+    border: 3px solid white;
+    padding: 11px 70px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px !important;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out; }
+
+.p-left {
+  padding-left: 24px;
+  margin: 0em; }
+
+.col-md-6 a:hover {
+  background: white;
+  color: black; }
+
+.movie-cover {
+  width: 100%;
+  background: url(http://www.orville.com/images/parallax/img-background.jpg) center/cover !important; }
+
+.movie-underlay {
+  background: url(/images/bg-header.jpg) center/cover;
+  width: 100%;
+  height: auto; }
+
+.movie-cover.top .container .row .col-md-12 {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.movie-cover.top .container .row .col-md-12 img {
+  width: 230px;
+  border: 4px solid white; }
+
+.top-p {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.fa {
+  padding-left: 2px;
+  padding-right: 2px; }
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+.active {
+  color: #F3CB0B; }
+
+.center {
+  text-align: center; }
+
+.glyphicon {
+  color: #000000; }
+
+.glyphicon:hover {
+  color: #C1272D; }
+
+h2 {
+  border-left: 3px #C1272D solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #3D3D3D;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px; }
+
+h3 {
+  border-left: 3px #C1272D solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #3D3D3D;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px; }
+
+.header-shadow {
+  -webkit-box-shadow: "0px 7px 30px 0px rgba(50, 50, 50, 0.74)";
+  -moz-box-shadow: "0px 7px 30px 0px rgba(50, 50, 50, 0.74)";
+  box-shadow: "0px 7px 30px 0px rgba(50, 50, 50, 0.74)";
+  opacity: 0.99; }
+
+.top {
+  padding-top: 90px;
+  padding-bottom: 15px; }
+
+.width {
+  width: 100%; }
+
+.container.top .col-md-2 {
+  padding: 2px;
+  transform: scale(1);
+  -webkit-transition: "transform .3s ease-in-out";
+  -moz-transition: "transform .3s ease-in-out";
+  -ms-transition: "transform .3s ease-in-out";
+  -o-transition: "transform .3s ease-in-out"; }
+
+.row {
+  padding-right: 13px;
+  padding-left: 13px; }
+
+footer {
+  background-color: #3D3D3D;
+  color: white;
+  display: table-row;
+  height: 1px; }
+  footer .container {
+    padding: 50px; }
+    footer .container .row {
+      padding-left: 0px;
+      padding-right: 0px; }
+      footer .container .row .col-md-2 select {
+        width: 100%;
+        height: 40px;
+        color: white;
+        background: transparent;
+        border: 2px white solid;
+        border-radius: 0px !important;
+        outline: none; }
+
+.fa-star-o {
+  color: #F3CB0B; }
+
+.clear {
+  height: 1px; }
+
+.yt-player {
+  height: 420px;
+  width: 60%;
+  border: 0px;
+  display: block;
+  margin: 0 auto; }
+
+.no-padding {
+  padding-left: 0.5px;
+  padding-right: 0.5px; }
+
+@media only screen and (max-width: 700px) {
+  header .container .logo-text {
+    display: none !important; }
+
+  .fa {
+    font-size: 11px; }
+
+  .yt-player {
+    width: 100%;
+    height: 315px; } }
+
+/*# sourceMappingURL=app.css.map */
