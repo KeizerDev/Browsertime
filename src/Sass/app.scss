@@ -1,38 +1,38 @@
 // Import Bootstrap
-@import "mixins.less";
+@import "mixins.scss";
 
-@header-height: 75px;
-@header-white: #ffffff;
-@header-border: #ECECEC;
-@header-grey: #252525;
-@theme-white: #000000;
-@theme-grey: #ffffff;
-@body-grey: #3D3D3D;
-@body-white: #FFFFFF;
-@text-red: #C1272D;
+$header-height: 75px;
+$header-white: #ffffff;
+$header-border: #ECECEC;
+$header-grey: #252525;
+$theme-white: #000000;
+$theme-grey: #ffffff;
+$body-grey: #3D3D3D;
+$body-white: #FFFFFF;
+$text-red: #C1272D;
 
 html, body {
-  background-color: @header-white;
+  background-color: $header-white;
   height: 100%;
   margin: 0; padding: 0;  /* to avoid scrollbars */
 }
 
 header {
-  background: @header-white;
-  height: @header-height;
+  background: $header-white;
+  height: $header-height;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 999;
   transition: all 0.2s ease-in-out;
-  border-bottom: 1px @header-border solid;
+  border-bottom: 1px $header-border solid;
 
   .container {
 
     .logo {
       float: left;
-      line-height: @header-height;
+      line-height: $header-height;
 
       img {
         height: 38px;
@@ -43,10 +43,10 @@ header {
       float: left;
       text-transform: uppercase;
       font-weight: bold;
-      line-height: @header-height;
+      line-height: $header-height;
       margin-left: 10px;
       letter-spacing: 1px;
-      color: @theme-white;
+      color: $theme-white;
     }
 
     ul {
@@ -57,13 +57,13 @@ header {
         float: left;
         line-height: 75px;
         padding: 0px 20px;
-        color: @theme-white;
+        color: $theme-white;
         text-transform: uppercase;
         font-weight: bold;
         display: block;
 
         .active {
-          color: @text-red;
+          color: $text-red;
         }
 
         &:last-child {
@@ -72,10 +72,10 @@ header {
 
         a {
           text-decoration: none;
-          color: @theme-white;
+          color: $theme-white;
 
           &:hover {
-            color: @text-red;
+            color: $text-red;
             text-decoration: none;
           }
         }
@@ -156,7 +156,7 @@ header {
     right: 0;
     bottom: 0;
     padding: 30px 20px 0 20px;
-    .transition(opacity 0.4s ease-in-out);
+    @include transition(opacity 0.4s ease-in-out);
 
     &:hover {
       opacity: 1;
@@ -178,7 +178,7 @@ header {
       letter-spacing: 3px;
       margin-bottom: 20px !important;
       text-decoration: none;
-      .transition(all 0.4s ease-in-out);
+      @include transition(all 0.4s ease-in-out);
   }
 }
 
@@ -238,7 +238,7 @@ header {
 }
 
 .glyphicon {
-  color: @theme-white;
+  color: $theme-white;
 }
 
 .glyphicon:hover {
@@ -250,7 +250,7 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 26px;
-  color: @body-grey;
+  color: $body-grey;
   padding-left: 20px;
   margin: 0;
   margin-bottom: 10px;
@@ -261,7 +261,7 @@ h3 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 22px;
-  color: @body-grey;
+  color: $body-grey;
   padding-left: 20px;
   margin: 0;
   margin-bottom: 10px;
@@ -269,8 +269,8 @@ h3 {
 
 
 .header-shadow {
-  .box-shadow(0px 7px 30px 0px rgba(50, 50, 50, 0.74));
-  .opacity(0.99);
+  @include box-shadow('0px 7px 30px 0px rgba(50, 50, 50, 0.74)');
+  @include opacity(0.99);
 }
 
 .top {
@@ -285,7 +285,7 @@ h3 {
 .container.top .col-md-2 {
     padding: 2px;
     transform: scale(1);
-    .transition('transform .3s ease-in-out');
+    @include transition('transform .3s ease-in-out');
 }
 
 .row {
@@ -294,7 +294,7 @@ h3 {
 }
 
 footer {
-  background-color: @body-grey;
+  background-color: $body-grey;
   color: white;
   display: table-row;
   height: 1px;

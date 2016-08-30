@@ -21,7 +21,7 @@ var MovieId = React.createClass({
     },
 
     componentDidMount: function() {
-        $.get('/api/movie/' + this.props.params.id, function(result) {
+        $.get('/api/movie/' + this.props.params.id + '.json', function(result) {
             if (this.isMounted()) {
                 this.setState({
                     movie: result,

@@ -12,7 +12,7 @@ var Movie = React.createClass({
     },
 
     componentDidMount: function() {
-        $.get('/api/movies', function(result) {
+        $.get('/api/movies.json', function(result) {
             if (this.isMounted()) {
                 this.setState({
                     movies: result,

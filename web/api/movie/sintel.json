@@ -1,0 +1,13 @@
+{
+    "title"           : "Sintel (2010)",
+    "title_clean"     : "Sintel",
+    "year"            : 2010,
+    "rating"          : 7.6,
+    "duration"        : 122,
+    "yt_trailer_code" : "HOfdboHvshg",
+    "imdb_code"       : "tt1727587",
+    "description"     : "A wandering warrior finds an unlikely friend in the form of a young dragon. The two develop a close bond, until one day the dragon is snatched away. She then sets out on a relentless quest to reclaim her friend, finding in the end that her quest exacts a far greater price than she had ever imagined.",
+    "genres"          : ["Animation","Short","Fantasy"],
+    "images"          : ["https://image.tmdb.org/t/p/w185/iJQy5tF9eMRU1Id3OqCvimazJZl.jpg","https://image.tmdb.org/t/p/w396/iJQy5tF9eMRU1Id3OqCvimazJZl.jpg"],
+    "hashes"          : ["0#720p","6a9759bffd5c0af65319979fb7832189f4f3c35d"]
+}
