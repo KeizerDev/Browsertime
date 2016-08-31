@@ -44431,8 +44431,11 @@ module.exports = DetailMovie;
 },{"../components/Cast":355,"../components/RelatedMovie":358,"../components/Stars":359,"react":298}],357:[function(require,module,exports){
 'use strict';
 
+var _reactRouter = require('react-router');
+
 var React = require('react');
 var Stars = require('../components/Stars');
+
 
 var MovieItem = React.createClass({
     displayName: 'MovieItem',
@@ -44444,8 +44447,8 @@ var MovieItem = React.createClass({
 
     render: function render() {
         return React.createElement(
-            'a',
-            { className: this.props.className, href: this.props.url },
+            _reactRouter.Link,
+            { to: this.props.url, className: this.props.className },
             React.createElement(
                 'div',
                 { className: 'col-movie' },
@@ -44471,7 +44474,7 @@ var MovieItem = React.createClass({
 
 module.exports = MovieItem;
 
-},{"../components/Stars":359,"react":298}],358:[function(require,module,exports){
+},{"../components/Stars":359,"react":298,"react-router":161}],358:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -44492,7 +44495,7 @@ var RelatedMovie = React.createClass({
         var movieList = [];
 
         nextProps.movieList.map(function (movie, i) {
-            movieList.push(React.createElement(MovieItem, { className: 'col-md-3 col-xs-6 no-padding', cover: movie.cover, title: movie.title, rating: movie.rating, url: '/movies/12' }));
+            movieList.push(React.createElement(MovieItem, { className: 'col-md-3 col-xs-6 no-padding', cover: movie.cover, title: movie.title, rating: movie.rating, url: '/movie/sintel' }));
         });
 
         this.setState({ movieList: movieList });
@@ -44791,7 +44794,7 @@ var PageNav = function (_React$Component4) {
 
 (0, _reactDom.render)(_react2.default.createElement(
     _reactRouter.Router,
-    { history: _reactRouter.browserHistory },
+    { history: _reactRouter.hashHistory },
     _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: App },
@@ -44861,7 +44864,7 @@ var Movie = React.createClass({
                 'div',
                 { className: 'row' },
                 !this.state.isLoaded ? React.createElement('img', { className: 'col-md-offset-5 col-md-2 col-xs-offset-5 col-xs-2', src: 'http://placehold.it/300x300' }) : this.state.movies.map(function (movie, i) {
-                    var moviesUrl = "/movies" + movie.url.slice(0, -1);
+                    var moviesUrl = "/movie" + movie.url.slice(0, -1);
                     return React.createElement(MovieItem, { className: 'col-md-2 col-xs-4', cover: movie.images[0], title: movie.title, rating: movie.rating, url: moviesUrl });
                 })
             )
@@ -44955,7 +44958,7 @@ var MovieId = React.createClass({
                             { className: 'col-md-6 btn-movieid' },
                             React.createElement(
                                 'a',
-                                { href: '#', onClick: this.handlePlayMovieClick },
+                                { className: 'btn-clickable', onClick: this.handlePlayMovieClick },
                                 'Play Movie'
                             )
                         ),
@@ -44964,7 +44967,7 @@ var MovieId = React.createClass({
                             { className: 'col-md-6 btn-movieid' },
                             React.createElement(
                                 'a',
-                                { href: '#', onClick: this.handleClick },
+                                { className: 'btn-clickable', onClick: this.handleClick },
                                 'Trailer'
                             )
                         )
