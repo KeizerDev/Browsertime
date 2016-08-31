@@ -59,10 +59,10 @@ var MovieId = React.createClass({
                                 {toggleTrailer}
                             </div>
                                 <div className="col-md-6 btn-movieid">
-                                    <a href="#" onClick={this.handlePlayMovieClick}>Play Movie</a>
+                                    <a className="btn-clickable" onClick={this.handlePlayMovieClick}>Play Movie</a>
                                 </div>
                                 <div className="col-md-6 btn-movieid">
-                                    <a href="#" onClick={this.handleClick}>Trailer</a>
+                                    <a className="btn-clickable" onClick={this.handleClick}>Trailer</a>
                                 </div>
                             </div>
                         </div>

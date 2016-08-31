@@ -14,7 +14,7 @@ var RelatedMovie = React.createClass({
         var movieList = []
 
         nextProps.movieList.map(function(movie, i){
-            movieList.push(<MovieItem className="col-md-3 col-xs-6 no-padding" cover={movie.cover} title={movie.title} rating={movie.rating} url="/movies/12" />)
+            movieList.push(<MovieItem className="col-md-3 col-xs-6 no-padding" cover={movie.cover} title={movie.title} rating={movie.rating} url="/movie/sintel" />)
         });
 
         this.setState({movieList: movieList});

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, NotFoundRoute, Link, IndexLink, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, NotFoundRoute, Link, IndexLink, hashHistory } from 'react-router'
 
 var routes = {
     Home: require('./routes/Home'),
@@ -90,7 +90,7 @@ class PageNav extends React.Component {
 }
 
 render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={routes.Movie}/>
             <Route path="movies" component={routes.Movie}/>

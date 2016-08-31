@@ -1,5 +1,6 @@
 var React = require('react');
 var Stars = require('../components/Stars')
+import { Link } from 'react-router'
 
 var MovieItem = React.createClass({
 
@@ -8,7 +9,7 @@ var MovieItem = React.createClass({
     },
 
     render: function() {
-        return (<a className={this.props.className} href={this.props.url}>
+        return (<Link to={this.props.url} className={this.props.className} >
                     <div className="col-movie">
                         <img className="width" src={this.props.cover} />
                         <div className="information">
@@ -18,7 +19,7 @@ var MovieItem = React.createClass({
                             </p>
                         </div>
                     </div>
-                </a>);
+                </Link>);
     }
 });
 
